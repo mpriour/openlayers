@@ -1,0 +1,375 @@
+<html>
+<head>
+    <script src="../OLLoader.js"></script>
+    <script type="text/javascript">
+    function test_initialize(t) {
+        t.plan(16);
+        var dimManager = new OpenLayers.Control.DimensionManager();
+        t.ok(!dimManager.intervals, "intervals is null by default");
+        t.ok(!dimManager.range, "range is null by default");
+        t.ok(!dimManager.layers, "layers is null by default");
+        t.ok(dimManager.fixedIntervals===undefined, "fixedIntervals is undefined by default");
+        t.ok(dimManager.fixedRange===undefined, "fixedRange is undefined by default");
+        t.ok(dimManager.fixedLayers===undefined, "fixedLayers is undefined by default");
+        
+        dimManager = new OpenLayers.Control.DimensionManager({
+            range:[0,10]
+        });
+        t.ok(dimManager.range instanceof Array, "range property is populated");
+        t.ok(dimManager.range[0] === 0 && dimManager.range[1] == 10, "range is correct");
+        t.ok(dimManager.fixedRange, "fixedRange is true");
+        t.eq(dimManager.currentValue,0, "currentValue set when range provided");
+        
+        dimManager = new OpenLayers.Control.DimensionManager({
+            intervals:[0,10,5]
+        });
+        t.ok(dimManager.intervals instanceof Array, "intervals property is populated");
+        t.ok(dimManager.intervals[2] == 10, "intervals property is sorted");
+        t.ok(dimManager.fixedIntervals, "fixedInterval is true");
+        t.eq(dimManager.currentValue,0, "currentValue set when intervals provided");
+        t.ok(dimManager.range[0] === 0 && dimManager.range[1] == 10, "range is correct");
+        t.ok(dimManager.fixedRange === undefined, "fixedRange is undefined");
+        
+    }
+    function test_play_stop(t) {
+        t.plan(5);
+        var dimManager = new OpenLayers.Control.DimensionManager({
+            tick: function(){this.currentValue++;},
+            range:[0,5],
+            step: 1
+        });
+        //test the play function
+        dimManager.dimensionAgents=true;
+        dimManager.play();
+        t.ok(dimManager.timer!=null, "timer is set");
+        t.ok(dimManager.currentValue>0, "currentValue has been incremented");
+        //test the stop function
+        dimManager.stop();
+        t.ok(!dimManager.timer,"timer has been cleared");
+        //test the play prevention
+        dimManager = new OpenLayers.Control.DimensionManager({
+            tick: function(){this.currentValue++;},
+            range:[0,5],
+            step: 1,
+            eventListeners:{'play':function(){return false;}}
+        });
+        dimManager.play();
+        t.ok(!dimManager.timer, "timer has not started");
+        t.eq(dimManager.currentValue, 0, "currentValue has not been increment");
+    }
+    function test_setRange(t){
+        t.plan(7);
+        var rm = 0;
+        var dm = new OpenLayers.Control.DimensionManager({
+            range:[0,5],
+            eventListeners:{
+                'rangemodified':function(evt){rm++;}
+            }
+        });
+        dm.setRange([-10,10]);
+        t.eq(dm.range,[-10,10],"range is set correctly");
+        t.eq(rm,1,"rangemodified event called once");
+        t.eq(dm.currentValue,-10,"currentValue is set since the control was not playing");
+        dm.step=-1;
+        dm.setRange([-10,10]);
+        t.eq(rm,1,"rangemodified event called once");
+        t.eq(dm.currentValue,10,"currentValue is set to upper range");
+        dm.timer = true;
+        dm.setRange([0,5]);
+        t.eq(rm,2,"rangemodified called twice");
+        t.eq(dm.currentValue,10,"currentValue didn't change since the timer was non-null");
+    }
+    function test_setStartEnd(t){
+        t.plan(8);
+        var dm = new OpenLayers.Control.DimensionManager({
+            range:[0,5]
+        });
+        //test start
+        dm.setStart(1);
+        t.eq(dm.range,[1,5],"range set properly");
+        t.eq(dm.currentValue,1,"currentValue set correctly");
+        dm.step=-1;
+        dm.setStart(10);
+        t.eq(dm.range,[1,10],"range set properly");
+        t.eq(dm.currentValue,10,"currentValue set correctly");
+        //test end
+        dm.step = 1;
+        dm.currentValue = 0;
+        dm.range = [0,5];
+        dm.setEnd(10);
+        t.eq(dm.range,[0,10],"range set properly");
+        t.eq(dm.currentValue,0,"currentValue not modified");
+        //some odd stuff happens with negative step and setEnd
+        dm.step=-1;
+        dm.setEnd(5);
+        t.eq(dm.range,[5,10],"range set properly");
+        t.eq(dm.currentValue,10,"currentValue set correctly");
+        //ummm that was a bit unexpected
+    }
+    function test_setCurrentValue(t){
+        t.plan(12);
+        var tc = 0;
+        var dm = new OpenLayers.Control.DimensionManager({
+            range:[0,5],
+            eventListeners:{
+                'tick':function(){tc++;}
+            }
+        });
+        dm.setCurrentValue(2);
+        t.eq(dm.currentValue,2,"current value set");
+        t.eq(tc,1,"tick fired 1 time");
+        dm = new OpenLayers.Control.DimensionManager({
+            snapToIntervals:true,
+            intervals:[0,5,10,15],
+            eventListeners:{
+                'tick':function(){tc++;}
+            }
+        });
+        tc = 0;
+        t.eq(dm.lastValueIndex,-1,"lastValueIndex at correct starting point");
+        //test an intermediate value
+        dm.setCurrentValue(7);
+        t.eq(dm.currentValue,5,"snapped to nearest list value");
+        t.eq(dm.lastValueIndex,1,"lastValueIndex set properly");
+        t.eq(tc,1,"tick fired 1 time");
+        //test an out of range time
+        dm.setCurrentValue(20);
+        //nothing should have changed
+        t.eq(dm.currentValue,5,"snapped to nearest list value");
+        t.eq(dm.lastValueIndex,1,"lastValueIndex set properly");
+        t.eq(tc,1,"tick fired 1 time");
+        //test an exact value
+        dm.setCurrentValue(15);
+        t.eq(dm.currentValue,15,"current value set correctly");
+        t.eq(dm.lastValueIndex,3,"lastValueIndex set properly");
+        t.eq(tc,2,"tick fired 2 times");
+    }
+    function test_reset(t){
+        t.plan(3);
+        var dm = new OpenLayers.Control.DimensionManager({
+            range:[0,5]
+        });
+        dm.currentValue=2;
+        dm.reset();
+        t.eq(dm.currentValue,0,"current value reset");
+        dm.step = -1;
+        dm.reset();
+        t.eq(dm.currentValue,5,"current value reset to end");
+        dm.events.on({
+            'reset':function(evt){
+                t.ok(evt.looped,"looped argument respected");
+            }
+        });
+        dm.step=1;
+        dm.reset(true);
+    }
+    function test_ogcToRangeRes(t){
+        t.plan(10);
+        var dimT = {
+            units: "ISO8601",
+            "default":"2000-08-22",
+            values:["1999-01-01/2000-08-22/P1D"]
+        };
+        var dimE = {
+            units: "CRS:88",
+            "default":"0",
+            nearestVal: true,
+            multipleVal: false,
+            values:["0/1000/100"]
+        };
+        var f = OpenLayers.Control.DimensionManager.ogcToRangeRes;
+        var intervalsT = f(dimT);
+        var intervalsE = f(dimE);
+        t.eq(intervalsT[0].length,3,"split dim values properly");
+        t.eq(intervalsE[0].length,3,"split dim values properly");
+        t.eq(intervalsT[0][0],"1999-01-01","no time conversion in dimension manager");
+        t.eq(intervalsE[0][1],1000,"numeric conversion in dimension manager");
+        dimE.values = ["0","10","50"];
+        intervalsE = f(dimE);
+        t.eq(intervalsE[0].length,3,"handles dim list properly");
+        t.ok(intervalsE[0][0]===0 && intervalsE[0][1]==50,"numeric conversion in dimension manager");
+        t.ok(intervalsE[0][2]=='list',"represented as list");
+        dimT.values = ["2012-01-01"];
+        intervalsT = f(dimT);
+        t.eq(intervalsT[0].length,3,"handles dim list properly");
+        t.ok(intervalsT[0][0]=="2012-01-01" && intervalsT[0][1]=="2012-01-01" ,"single value list parsed properly");
+        t.ok(intervalsT[0][2]=='list',"represented as list");
+    }
+    function test_findNearestValue(t){
+        t.plan(0);
+    }
+    function test_addAgentLayer(t){
+        t.plan(3); 
+        var mockAgent = function(){
+            layers = [];
+            add = function(lyr){this.layers.push(lyr);};
+        };
+        OpenLayers.DimensionAgent._WMS = OpenLayers.DimensionAgent.WMS;
+        OpenLayers.DimensionAgent.WMS = mockAgent;
+        
+        var dm = new OpenLayers.Control.DimensionManager({
+            range:[0,5],
+            dimensionAgents:[],
+            dimension: 'test'
+        });
+        var lyr = new OpenLayers.Layer.WMS('lyr','',null,{dimensions:{test:true}});
+        t.ok(dm.addAgentLayer(lyr),"layer added successfully");
+        t.eq(dm.dimensionAgents.length,1,"dimensionAgent added to dimensionManager");
+        t.ok(dm.dimensionAgents[0] instanceof OpenLayers.DimensionAgent.WMS,"Added correct type of agent");
+        OpenLayers.DimensionAgent.WMS = OpenLayers.DimensionAgent._WMS;
+    }
+    function test_removeAgentLayer(t){
+        t.plan(4);
+        var lyr1 = new OpenLayers.Layer("lyr1");
+        var lyr2 = new OpenLayers.Layer("lyr2");
+
+        var dm = new OpenLayers.Control.DimensionManager({
+            range:[0,5]
+        });
+
+        var agent = new OpenLayers.DimensionAgent({
+            removeLayer: function(lyr){
+                var i = OpenLayers.Util.indexOf(this.layers,lyr);
+                if(i!=-1){this.layers.splice(i,1);}
+            },
+            layers: [lyr1,lyr2],
+            dimensionManager: dm
+        });
+        
+        dm.dimensionAgents=[agent];
+        
+        dm.removeAgentLayer(lyr1);
+        t.eq(dm.dimensionAgents.length,1,"dim control has agents");
+        t.eq(agent.layers.length,1,"agent has correct number of layers");
+        dm.removeAgentLayer(lyr2);
+        t.eq(dm.dimensionAgents.length,0,"dim control has no dimensional layers and thus no agents");
+        t.ok(!agent.dimensionManager && 
+            OpenLayers.Util.indexOf(dm.dimensionAgents,agent)==-1,
+                "agent was destroyed"
+        );
+    }
+    function test_buildDimensionAgents(t){
+        t.plan(18);
+        
+        
+        var dm = new OpenLayers.Control.DimensionManager();
+        
+        var lyr1 = new OpenLayers.Layer.WMS('lyr1','',null,{
+            dimensions:{
+                'test': {
+                    values: [0,5,12,20]
+                }
+            }
+        });
+        //basic tests
+        var agents = dm.buildDimensionAgents([lyr1],'test');
+        t.ok(agents && agents instanceof Array, "returned correct value & type");
+        t.eq(agents.length,1,"agents is correct length");
+        t.ok(agents[0] instanceof OpenLayers.DimensionAgent.WMS, "built correct agent type");
+        var agent = agents[0];
+        t.eq(agent.layers.length,1,"agent has correct number of layers");
+        t.ok(agent.layers[0] == lyr1,"agent has the correct layer");
+        t.ok(agent.dimensionManager == dm,"agent has the correct dimensionManager");
+        t.eq(agent.dimension,'test','agent has the correct dimension');
+        dm = null;
+        
+        //multi layer tests
+        dm = new OpenLayers.Control.DimensionManager({
+            agentOptions:{
+                WMS:{
+                    foo:'bar',
+                    t:0,
+                    onTick: function(){++this.t;}
+                }
+            },
+            dimension: 'test'
+        });
+        OpenLayers.DimensionAgent.Vector = OpenLayers.Class(OpenLayers.DimensionAgent,{
+            ticks:0,
+            onTick:function(){++this.ticks;}
+        });
+        var lyr2 = new OpenLayers.Layer.Vector('lyr2',{
+            dimensions:{
+                'test': {
+                    values: [0,8,15,20]
+                },
+                'elevation': {
+                    values: [10,100]
+                }
+            }
+        });
+        
+        dm.layers = [lyr1,lyr2];
+        agents = dm.buildDimensionAgents();
+        t.eq(agents.length,2,"build correct number of agents");
+        t.ok(agents[0] instanceof OpenLayers.DimensionAgent.WMS &&
+                agents[1] instanceof OpenLayers.DimensionAgent.Vector,
+            "built correct agent types");
+        t.eq(agents[1].dimension,'test','used correct dimension value');
+        t.eq(agents[0].foo,'bar','respected agentOptions');
+        dm.events.triggerEvent('tick',{currentValue:0});
+        t.ok(agents[0].t==1 && agents[1].ticks==1,'tick event triggered onTick functions');
+        
+        dm = null;
+        lyr2.ticks = 0;
+        
+        //anonymous agent type tests
+        var f = function(){this.t ? ++this.t : this.t=1;};
+        var lyr3 = new OpenLayers.Layer('lyr3',{
+            dimensionAgent: f,
+            dimensions:{elevation:{values:[0,10]}}
+        });
+        
+        dm = new OpenLayers.Control.DimensionManager({
+            dimension:'elevation'
+        });
+        agents = dm.buildDimensionAgents([lyr3,lyr2,lyr1]);
+        t.eq(agents.length,2,'layers missing specified dimension are ignored');
+        var agent1 = agents[0];
+        t.ok(agent1 instanceof OpenLayers.DimensionAgent &&
+                !(agent1 instanceof OpenLayers.DimensionAgent.Vector ||
+                    agent1 instanceof OpenLayers.DimensionAgent.WMS),
+            'dimension agent is not a subclass');
+        t.ok(agent1.layers[0] == lyr3, 'correct layer added');
+        t.ok(!lyr3.dimensionAgent, 'dimensionAgent property removed');
+        t.eq(agent1.onTick,f,'layer dimensionAgent property transfered to agent onTick function');
+        dm.events.triggerEvent('tick',{currentValue:0});
+        t.ok(agent1.t==1,'tick event triggered onTick functions');
+    }
+    function test_buildListValues(t){
+        t.plan(6);
+        var da1 = new OpenLayers.DimensionAgent({values:[10,20,30]});
+        var da2 = new OpenLayers.DimensionAgent({values:[5,10,30]});
+        var dm = new OpenLayers.Control.DimensionManager();
+        var values = dm.buildValuesList([da1,da2]);
+        t.ok(values && values instanceof Array, "function return value with corrrect type");
+        t.eq(values.length,5,"function combined lists from provided agents");
+        t.ok(values[0]==5 && values[4]==30, "correct values in list");
+        dm = new OpenLayers.Control.DimensionManager();
+        dm.agents = [{values:[1,2]},{values:[2,3]}];
+        values = dm.buildValuesList();
+        t.ok(values && values instanceof Array, "function return value with corrrect type");
+        t.eq(values.length,3,"function combined lists from dm.agents");
+        t.ok(values[0]==1 && values[2]==3, "correct values in list");
+    }
+    function test_buildRange(t){
+        t.plan(0);        
+    }
+    function test_setMap(t){
+        t.plan(0);        
+    }
+    function test_addLayer(t){
+        t.plan(0);        
+    }
+    function test_removeLayer(t){
+        t.plan(0);        
+    }
+    function test_tick(t){
+        t.plan(0);        
+    }
+    </script>
+</head>
+<body>
+    <div id="map" style="width: 400px; height: 250px;"/>
+</body>
+</html>
