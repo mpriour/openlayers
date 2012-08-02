@@ -86,10 +86,120 @@
         t.eq(eInfo.range,[50,50],"gets range from single value list properly");
     }
     function test_combineDimensionInfo(t){
-        t.plan(0);
+        t.plan(18);
+        var rm = 0, vm = 0;
+        var m = new OpenLayers.Dimension.Model({
+            range: [0,5],
+            resolution: 1,
+            eventListeners:{
+                'rangemodified':function(e){++rm;},
+                'valuesmodified':function(e){++vm;}
+            }
+        });
+        //test range & res
+        m.combineDimensionInfo({range:[-1,6]});
+        t.eq(m.range,[-1,6],'range adjusted');
+        t.eq(rm,1,'range modified fired');
+        m.combineDimensionInfo({range:[2,8]});
+        t.eq(m.range,[-1,8],'range adjusted');
+        t.eq(rm,2,'range modified fired');
+        m.combineDimensionInfo({range:[-2,4]});
+        t.eq(m.range,[-2,8],'range adjusted');
+        t.eq(rm,3,'range modified fired');
+        m.combineDimensionInfo({range:[2,4]});
+        t.eq(rm,3,'range modified not fired');
+        t.eq(vm,0,'valuesmodifed was never fired');
+        //test value list
+        rm=0;vm=0;m=null;
+        m = new OpenLayers.Dimension.Model({
+            values: [0,5,11],
+            eventListeners:{
+                'rangemodified':function(e){++rm;},
+                'valuesmodified':function(e){++vm;}
+            }
+        });
+        t.eq(m.range,[0,11],'range calculated from values');
+        m.combineDimensionInfo({
+            values:[-1,2,9],
+            range:[-1,9]
+        });
+        t.eq(m.values,[-1,0,2,5,9,11],'values combined correctly');
+        t.eq(rm,1,'range modified fired');
+        t.eq(vm,1,'values modified fired');
+        m.combineDimensionInfo({
+            values:[3,7],
+            range:[3,7]
+        });
+        t.eq(m.values,[-1,0,2,3,5,7,9,11],'values combined correctly');
+        t.eq(rm,1,'range modified NOT fired');
+        t.eq(vm,2,'values modified fired');
+        m.combineDimensionInfo({
+            values:[2,5,11],
+            range:[2,11]
+        });
+        t.eq(m.values,[-1,0,2,3,5,7,9,11],'values list is not changed');
+        t.eq(rm,1,'range modified NOT fired');
+        t.eq(vm,2,'values modified NOT fired');
     }
     function test_removeDimensionInfo(t){
-        t.plan(0);
+        t.plan(23);
+        var rm = 0, vm = 0;
+        var m = new OpenLayers.Dimension.Model({
+            range: [0,5],
+            dimension:'test',
+            resolution: 1,
+            eventListeners:{
+                'rangemodified':function(e){++rm;},
+                'valuesmodified':function(e){++vm;}
+            }
+        });
+        m.layers = [{metadata:{testInfo:{range:[2,4]}}},
+        {metadata:{testInfo:{range:[1,3]}}}];
+        //test range & res
+        m.removeDimensionInfo({range:[0,5]});
+        t.eq(m.range,[1,4],'range adjusted');
+        t.eq(rm,1,'range modified fired');
+        m.layers = [m.layers[1]];
+        m.removeDimensionInfo({range:[2,4]});
+        t.eq(m.range,[1,3],'range adjusted');
+        t.eq(rm,2,'range modified fired');
+        m.removeDimensionInfo({range:[-2,4]});
+        t.eq(m.range,[1,3],'range NOT adjusted');
+        t.eq(rm,2,'range modified not fired');
+        t.eq(vm,0,'valuesmodifed was never fired');
+        //test value list
+        rm=0;vm=0;m=null;
+        m = new OpenLayers.Dimension.Model({
+            values: [-1,0,2,3,5,9,11],
+            eventListeners:{
+                'rangemodified':function(e){++rm;},
+                'valuesmodified':function(e){++vm;}
+            }
+        });
+        m.removeDimensionInfo({values:[-1,9]});
+        t.eq(m.values,[0,2,3,5,11],'value adjusted');
+        t.eq(m.range,[0,11],'range adjusted');
+        t.eq(rm,1,'range modified fired');
+        t.eq(vm,1,'values modifed fired');
+        
+        m.removeDimensionInfo({values:[11]});
+        t.eq(m.values,[0,2,3,5],'value adjusted');
+        t.eq(m.range,[0,5],'range adjusted');
+        t.eq(rm,2,'range modified fired');
+        t.eq(vm,2,'values modifed fired');
+        
+        m.removeDimensionInfo({values:[2]});
+        t.eq(m.values,[0,3,5],'value adjusted');
+        t.eq(m.range,[0,5],'range NOT adjusted');
+        t.eq(rm,2,'range modified NOT fired');
+        t.eq(vm,3,'values modifed fired');
+        
+        m.removeDimensionInfo({values:[-2,4,6]});
+        t.eq(m.values,[0,3,5],'values NOT adjusted');
+        t.eq(m.range,[0,5],'range NOT adjusted');
+        t.eq(rm,2,'range modified NOT fired');
+        t.eq(vm,3,'values modifed NOT fired');
+
     }
     function test_addLayer(t){
         t.plan(0);
