@@ -211,8 +211,46 @@
         t.plan(0);
     }    
     function test_initialize(t){
-        t.plan(0);
+        t.plan(7);
         //test various option combinations
+        var map = new OpenLayers.Map({
+            layers:[new OpenLayers.Layer('a',{
+                dimensions: {
+                    test: {values:["0/1000/10"]}
+                }
+            })]
+        });
+        var lyrs = [new OpenLayers.Layer('b',{
+                dimensions: {
+                    test: {values:["-100/10/25"]}
+                }
+            }), new OpenLayers.Layer('c',{
+                dimensions: {
+                    test: {values:[-50,-20,0,15,45]}
+                }
+            })];
+        var m = new OpenLayers.Dimension.Model({
+            dimension: 'test',
+            map: map,
+            layers: lyrs,
+            range: [-500,5000]
+        });
+        //should only use the map's layer
+        t.eq(m.range,[0,1000],'used correct option');
+        t.ok(m.layers.length == 1 && m.layers[0].id == map.layers[0].id,'used correct layers');
+        t.eq(m.resolution,10,'used correct resolution');
+        
+        m = null;
+        m = new OpenLayers.Dimension.Model({
+            dimension: 'test',
+            layers: lyrs,
+            range: [-500,5000]
+        });
+        //should only use the layers info
+        t.eq(m.range,[-100,45],'used correct option');
+        t.ok(m.layers.length == 2 && m.layers[1].id == lyrs[1].id,'used correct layers');
+        t.eq(m.resolution,25,'used correct resolution');
+        t.eq(m.values,[-50,-20,0,15,45],'got list values');    
     }
     function test_combineLists(t){
         t.plan(0);        
