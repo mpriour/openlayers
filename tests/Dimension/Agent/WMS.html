@@ -1,0 +1,214 @@
+<html>
+<head>
+    <script src="../../OLLoader.js"></script>
+    <script type="text/javascript">
+    function test_basic(t) {
+        t.plan(0);
+    }
+    function test_applyDimension(t){
+        t.plan(21);
+        var value, minVal;
+        var agent = new OpenLayers.Dimension.Agent.WMS({
+            tickMode: 'cumulative',
+            range:[0,100],
+            dimension: 'elevation',
+            requestElevation: function(l,val,minval){
+                value = val;
+                minVal = minval;
+            },
+            onLayerLoadEnd: function(){
+                value = 'nullValue';
+            }
+        });
+        var lyr = {};
+        //test cumulative tick mode (value & range[0])
+        agent.applyDimension(lyr,25);
+        t.eq(value, 25, "value applied correctly");
+        t.eq(minVal, 0, "minVal applied correctly");
+        value = minVal = null;
+        //test range tick mode (value & value - rangeInterval)
+        agent.tickMode = 'range';
+        agent.rangeInterval = 10;
+        agent.applyDimension(lyr,25);
+        t.eq(value, 25, "value applied correctly");
+        t.eq(minVal, 15, "minVal applied correctly");
+        //test track tick mode w/o snapToList - (value ONLY)
+        value = minVal = null;
+        agent.tickMode = 'track';
+        agent.dimensionManager = {snapToList: false};
+        agent.applyDimension(lyr, 25);
+        t.eq(value, 25, "value applied correctly");
+        t.ok(!minVal && minVal != 0, "minVal was not applied");
+        //test track tick mode w snapToList
+        value = minVal = null;
+        agent.dimensionManager = {snapToList: true};
+        lyr.metadata = {elevationInfo:{list:[25,50]}};
+        //exact & out of range values should work the same,
+        //regardless of the intervalMode
+        agent.intervalMode = 'nearest';
+        agent.applyDimension(lyr, 25);
+        t.eq(value, 25, "value applied correctly");
+        value = null;
+        agent.applyDimension(lyr, 60);
+        t.eq(value, 'nullValue', "out of layer range value applied correctly");
+        value = null;
+        agent.intervalMode = 'lastValid';
+        agent.applyDimension(lyr, 25);
+        t.eq(value, 25, "value applied correctly");
+        value = null;
+        agent.applyDimension(lyr, 60);
+        t.eq(value, 'nullValue', "out of layer range value applied correctly");
+        value = null;
+        //test track tick mode w snapToList & exact intervalMode (value only for exact matches)        
+        agent.intervalMode = 'exact';
+        agent.applyDimension(lyr, 25);
+        t.eq(value, 25, "value applied correctly");
+        value = null;
+        agent.applyDimension(lyr, 30);
+        t.eq(value, 'nullValue', 'null value applied correctly');
+        value = null;
+        //test track tick mode w snapToList & lastValid intervalMode (last exact value <= applied value)
+        agent.intervalMode = 'lastValid';
+        agent.applyDimension(lyr, 45);
+        t.eq(value, 25, 'lastValid value used');
+        value = null;
+        agent.applyDimension(lyr, 24);
+        t.eq(value, 'nullValue', 'out of range value found, layer skipped');
+        value = null;
+        //test track tick mode w snapToList & nearest intervalMode (value only for the nearest matche)
+        agent.intervalMode = 'nearest';
+        agent.applyDimension(lyr, 45);
+        t.eq(value, 50, 'nearest value used');
+        value = null;
+        agent.applyDimension(lyr, 30);
+        t.eq(value, 25, 'nearest value used');
+        value = null;
+        agent.applyDimension(lyr, 37.5);
+        t.eq(value, 50, 'larger value used in case of tie');
+        //test call of applyDimension to requestXX function
+        agent = value = minVal = null;
+        agent = new OpenLayers.Dimension.Agent.WMS({
+            tickMode: 'track',
+            dimension: 'elevation',
+            dimensionManager: {snapToList:false},
+            requestElevation: function(){
+                value = 'requestElevation';
+            },
+            requestTime: function(){
+                value = 'requestTime';
+            },
+            requestValue: function(l,v,m,title){
+                value = 'requestValue';
+                minVal = title;
+            }
+        });
+        agent.applyDimension(lyr, 10);
+        t.eq(value, 'requestElevation', 'correct function called');
+        value = null;
+        agent.dimension = 'time';
+        agent.applyDimension(lyr, 10);
+        t.eq(value, 'requestTime', 'correct function called');
+        value = null;
+        agent.dimension = 'test';
+        agent.applyDimension(lyr, 10);
+        t.eq(value, 'requestValue', 'correct function called');
+        t.eq(minVal, 'Test', 'correct dimensional parameter used');
+    }
+    function test_requestValue(t){
+        t.plan(2);
+        var dim = "Test";
+        var key, value;
+        var lyr = {
+            mergeNewParams: function(p){
+                for(var k in p){
+                    if(p.hasOwnProperty(k)){
+                        key = k;
+                        value = p[k];
+                    }
+                }
+            }
+        };
+        var agent = new OpenLayers.Dimension.Agent.WMS();
+        agent.requestValue(lyr,50,null,dim);
+        t.ok(key=='dimTest' && value==50, 'used correct parameter name & value');
+        key = value = null;
+        agent.requestValue(lyr,100,50,dim);
+        t.eq(value, "50/100", 'concatenated the values properly');
+    }
+    function test_requestElevation(t){
+        t.plan(2);
+        var key, value;
+        var lyr = {
+            mergeNewParams: function(p){
+                for(var k in p){
+                    if(p.hasOwnProperty(k)){
+                        key = k;
+                        value = p[k];
+                    }
+                }
+            }
+        };
+        var agent = new OpenLayers.Dimension.Agent.WMS();
+        agent.requestElevation(lyr,50);
+        t.ok(key=='elevation' && value==50, 'used correct parameter name & value');
+        key = value = null;
+        agent.requestValue(lyr,100,50);
+        t.eq(value, "50/100", 'concatenated the values properly');        
+    }
+    function test_requestTime(t){
+        t.plan(8);
+        var key, value;
+        var lyr = {
+            mergeNewParams: function(p){
+                for(var k in p){
+                    if(p.hasOwnProperty(k)){
+                        key = k;
+                        value = p[k];
+                    }
+                }
+            }
+        };
+        var agent = new OpenLayers.Dimension.Agent.WMS({
+            dimensionManager: {timeUnits: OpenLayers.TimeUnit.SECONDS}
+        });
+        var d1 = new Date("06/15/2010 15:00:00 GMT").getTime(),
+        d2 = new Date("05/25/2012 15:00:00 GMT").getTime();
+
+        agent.requestTime(lyr,d1);
+        t.ok(key=='time' && value == "2010-06-15T15:00:00.000Z", 'used correct parameter name & value');
+        key = value = null;
+
+        agent.dimensionManager.timeUnits = OpenLayers.TimeUnit.YEARS;
+        agent.requestTime(lyr,d1);
+        t.eq(value,"2010","value truncated correctly");
+
+        agent.dimensionManager.timeUnits = OpenLayers.TimeUnit.MONTHS;
+        agent.requestTime(lyr,d1);
+        t.eq(value,"2010-06","value truncated correctly");
+
+        agent.dimensionManager.timeUnits = OpenLayers.TimeUnit.DAYS;
+        agent.requestTime(lyr,d1);
+        t.eq(value,"2010-06-15","value truncated correctly");
+
+        agent.dimensionManager.timeUnits = OpenLayers.TimeUnit.HOURS;
+        agent.requestTime(lyr,d1);
+        t.eq(value,"2010-06-15T15:00Z","value truncated correctly");
+
+        agent.dimensionManager.timeUnits = OpenLayers.TimeUnit.MINUTES;
+        agent.requestTime(lyr,d1);
+        t.eq(value,"2010-06-15T15:00:00.000Z","value not truncated");
+        
+        agent.dimensionManager.timeUnits = OpenLayers.TimeUnit.MONTHS;
+        agent.requestTime(lyr,d2,d1);
+        t.eq(value,"2010-06/2012-05","values truncated & combined correctly");
+        
+        agent.dimensionManager.timeUnits = OpenLayers.TimeUnit.MINUTES;
+        agent.requestTime(lyr,d2,d1);
+        t.eq(value,"2010-06-15T15:00:00.000Z/2012-05-25T15:00:00.000Z","values combined correctly");        
+    }
+    </script>
+</head>
+<body>
+    <div id="map" style="width: 400px; height: 250px;"/>
+</body>
+</html>
