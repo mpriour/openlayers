@@ -1,0 +1,2250 @@
+<?xml version="1.0" ?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>OpenLayers Examples</title>
+  <id>http://mpriour.github.com/openlayers/examples/example-list.xml#2012-08-22T10:33:10Z</id>
+  <updated>2012-08-22T10:33:10Z</updated>
+  <entry>
+    <title>WPS Builder Example</title>
+    <tags>wps, process, advanced</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/wps.html"/>
+    <summary>Using WPS formats to interact with WPS</summary>
+    <updated>2012-08-18T18:56:36+0200</updated>
+    <author>
+      <name>ahocevar</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/wps.html#2012-08-18T18:56:36+0200</id>
+  </entry>
+  <entry>
+    <title>MousePosition Control</title>
+    <tags>coordinate</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/mouse-position.html"/>
+    <summary>Use the MousePosition Control to display the coordinates of the cursor inside or outside the map div.</summary>
+    <updated>2012-08-17T23:40:18+0200</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/mouse-position.html#2012-08-17T23:40:18+0200</id>
+  </entry>
+  <entry>
+    <title>WPS Client Example</title>
+    <tags>wps</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/wps-client.html"/>
+    <summary>Shows the usage of the WPS Client</summary>
+    <updated>2012-08-14T13:17:07+0200</updated>
+    <author>
+      <name>ahocevar</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/wps-client.html#2012-08-14T13:17:07+0200</id>
+  </entry>
+  <entry>
+    <title>WFS United States (GeoServer) Example</title>
+    <tags>wfs, vector</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/wfs-states.html"/>
+    <summary>Shows the use of the WFS United States (GeoServer).</summary>
+    <updated>2012-08-08T09:20:14+0200</updated>
+    <author>
+      <name>Bart van den Eijnden</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/wfs-states.html#2012-08-08T09:20:14+0200</id>
+  </entry>
+  <entry>
+    <title>OSM with Marker and Popup</title>
+    <tags>openstreetmap osm marker popup</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/osm-marker-popup.html"/>
+    <summary>Demonstrate use of an OSM layer with a marker and a popup.</summary>
+    <updated>2012-06-25T17:18:32+0200</updated>
+    <author>
+      <name>ahocevar</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/osm-marker-popup.html#2012-06-25T17:18:32+0200</id>
+  </entry>
+  <entry>
+    <title>Web Map Tile Service (WMTS) Capabilities Parsing</title>
+    <tags>wmts, capabilities, getcapabilities</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/wmts-capabilities.html"/>
+    <summary>The WMTS Capabilities format allows for parsing of capabilities documents from OGC Web Map Tile Service (WMTS) version 1.0.0 implementations.</summary>
+    <updated>2012-06-25T14:55:44+0200</updated>
+    <author>
+      <name>Stéphane Brunner</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/wmts-capabilities.html#2012-06-25T14:55:44+0200</id>
+  </entry>
+  <entry>
+    <title>Cluster Strategy Threshold</title>
+    <tags>vector, feature, stylemap, wfs, cluster, strategy, cleanup</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/strategy-cluster-threshold.html"/>
+    <summary>Demonstrates the use of the cluster strategy threshold property.</summary>
+    <updated>2012-06-25T14:19:26+0200</updated>
+    <author>
+      <name>Frederic Junod</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/strategy-cluster-threshold.html#2012-06-25T14:19:26+0200</id>
+  </entry>
+  <entry>
+    <title>Mobile Drawing Example</title>
+    <tags>mobile, drawing</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/mobile-drawing.html"/>
+    <summary>A full-screen map with drawing tools for mobile devices.</summary>
+    <updated>2012-06-07T09:21:44+0200</updated>
+    <author>
+      <name>Éric Lemoine</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/mobile-drawing.html#2012-06-07T09:21:44+0200</id>
+  </entry>
+  <entry>
+    <title>OpenLayers with jQuery Mobile</title>
+    <tags>mobile, jquery</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/mobile-jq.html"/>
+    <summary>Using jQuery Mobile to display an OpenLayers map.</summary>
+    <updated>2012-06-07T09:21:44+0200</updated>
+    <author>
+      <name>Éric Lemoine</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/mobile-jq.html#2012-06-07T09:21:44+0200</id>
+  </entry>
+  <entry>
+    <title>Mobile example with various layer types</title>
+    <tags>mobile, WMS, WFS, KML</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/mobile-layers.html"/>
+    <summary>A mobile example displaying various layer types: WMS, WFS, KML.</summary>
+    <updated>2012-06-07T09:21:44+0200</updated>
+    <author>
+      <name>Éric Lemoine</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/mobile-layers.html#2012-06-07T09:21:44+0200</id>
+  </entry>
+  <entry>
+    <title>Mobile Navigation</title>
+    <tags>mobile, touch, drag, move, zoom, navigate</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/mobile-navigation.html"/>
+    <summary>Demonstrate map navigation on mobile</summary>
+    <updated>2012-06-07T09:21:44+0200</updated>
+    <author>
+      <name>Éric Lemoine</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/mobile-navigation.html#2012-06-07T09:21:44+0200</id>
+  </entry>
+  <entry>
+    <title>OpenLayers with Sencha Touch</title>
+    <tags>mobile, sencha touch</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/mobile-sencha.html"/>
+    <summary>Using Sencha Touch to display an OpenLayers map.</summary>
+    <updated>2012-06-07T09:21:44+0200</updated>
+    <author>
+      <name>Éric Lemoine</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/mobile-sencha.html#2012-06-07T09:21:44+0200</id>
+  </entry>
+  <entry>
+    <title>Basic Mobile Example</title>
+    <tags>mobile</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/mobile.html"/>
+    <summary>A basic full-screen map for mobile devices.</summary>
+    <updated>2012-06-07T09:21:44+0200</updated>
+    <author>
+      <name>Éric Lemoine</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/mobile.html#2012-06-07T09:21:44+0200</id>
+  </entry>
+  <entry>
+    <title>Accelerometer Example</title>
+    <tags>mobile, game</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/game-accel-ball.html"/>
+    <summary>Simple acceleration demo; roll a vector feature around on a map. (Only tested on iOS 4.)</summary>
+    <updated>2012-05-29T21:47:22+0200</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/game-accel-ball.html#2012-05-29T21:47:22+0200</id>
+  </entry>
+  <entry>
+    <title>Feature Info Example</title>
+    <tags>WMS, GetFeatureInfo</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/getfeatureinfo-control.html"/>
+    <summary>Demonstrates the WMSGetFeatureInfo control for fetching information about a position from WMS (via GetFeatureInfo request).</summary>
+    <updated>2012-05-29T21:47:22+0200</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/getfeatureinfo-control.html#2012-05-29T21:47:22+0200</id>
+  </entry>
+  <entry>
+    <title>OpenLayers Select Feature Example</title>
+    <tags>vector, feature, selecting, selection, advanced</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/select-feature.html"/>
+    <summary>Select a feature on hover or click with the Control.SelectFeature on a vector layer.</summary>
+    <updated>2012-05-29T21:47:22+0200</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/select-feature.html#2012-05-29T21:47:22+0200</id>
+  </entry>
+  <entry>
+    <title>Snapping &amp; Splitting Example</title>
+    <tags>vector, feature, splitting, snapping, stylemap, advanced</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/snap-split.html"/>
+    <summary>A demonstration snapping and splitting while editing vector features.</summary>
+    <updated>2012-05-29T21:47:22+0200</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/snap-split.html#2012-05-29T21:47:22+0200</id>
+  </entry>
+  <entry>
+    <title>Snapping Example</title>
+    <tags>vector, feature, snapping, stylemap, advanced</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/snapping.html"/>
+    <summary>A demonstration snapping while editing vector features.</summary>
+    <updated>2012-05-29T21:47:22+0200</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/snapping.html#2012-05-29T21:47:22+0200</id>
+  </entry>
+  <entry>
+    <title>Cluster Strategy Example</title>
+    <tags>vector, feature, stylemap, cluster, strategy, flickr, script</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/strategy-cluster.html"/>
+    <summary>Uses a cluster strategy to render points representing clusters of features.</summary>
+    <updated>2012-05-29T21:47:22+0200</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/strategy-cluster.html#2012-05-29T21:47:22+0200</id>
+  </entry>
+  <entry>
+    <title>Click Event Example</title>
+    <tags>click control, double, doubleclick, double-click, event, events, propagation, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/click.html"/>
+    <summary>This example shows the use of the click handler and getLonLatFromPixel functions to trigger events on mouse click.</summary>
+    <updated>2012-05-24T14:00:25+0200</updated>
+    <author>
+      <name>Frederic Junod</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/click.html#2012-05-24T14:00:25+0200</id>
+  </entry>
+  <entry>
+    <title>Marker Shadows using Background Graphics/Z-Indexes</title>
+    <tags>markers, shadow, style</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/marker-shadow.html"/>
+    <summary>This example shows off marker shadows using background graphics and z-indexes. Move the features around to show the shadows' interaction.</summary>
+    <updated>2012-05-24T14:00:25+0200</updated>
+    <author>
+      <name>Frederic Junod</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/marker-shadow.html#2012-05-24T14:00:25+0200</id>
+  </entry>
+  <entry>
+    <title>Z-Index/Y-Order Example</title>
+    <tags>stack, stacking, zindex, ordering, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/ordering.html"/>
+    <summary>This example shows the use of z-indexing and y-ordering of external graphics. Zoom in and out to see this behavior.</summary>
+    <updated>2012-05-24T14:00:25+0200</updated>
+    <author>
+      <name>Frederic Junod</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/ordering.html#2012-05-24T14:00:25+0200</id>
+  </entry>
+  <entry>
+    <title>All Overlays with Google and OSM</title>
+    <tags>overlay, baselayer, google, osm, openstreetmap, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/all-overlays-google.html"/>
+    <summary>Using the Google and OSM layers as overlays.</summary>
+    <updated>2012-05-22T10:07:18+0200</updated>
+    <author>
+      <name>Éric Lemoine</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/all-overlays-google.html#2012-05-22T10:07:18+0200</id>
+  </entry>
+  <entry>
+    <title>Google (v3) allOverlays Layer Example</title>
+    <tags>Google, overlay, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/google-v3-alloverlays.html"/>
+    <summary>Demonstrate use the Google Maps v3 API with allOverlays set to true on the map.</summary>
+    <updated>2012-05-22T10:07:18+0200</updated>
+    <author>
+      <name>Éric Lemoine</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/google-v3-alloverlays.html#2012-05-22T10:07:18+0200</id>
+  </entry>
+  <entry>
+    <title>Google (v3) Layer Example</title>
+    <tags>Google, api key, apikey, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/google-v3.html"/>
+    <summary>Demonstrate use the Google Maps v3 API.</summary>
+    <updated>2012-05-22T10:07:18+0200</updated>
+    <author>
+      <name>Éric Lemoine</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/google-v3.html#2012-05-22T10:07:18+0200</id>
+  </entry>
+  <entry>
+    <title>OSM and Google Together</title>
+    <tags>openstreetmap google light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/osm-google.html"/>
+    <summary>Demonstrate use of an OSM layer and a Google layer as base layers.</summary>
+    <updated>2012-05-22T10:07:18+0200</updated>
+    <author>
+      <name>Éric Lemoine</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/osm-google.html#2012-05-22T10:07:18+0200</id>
+  </entry>
+  <entry>
+    <title>OpenLayers Spherical Mercator Example</title>
+    <tags>spherical, mercator, osm, xyz, google, virtual earth, tile</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/spherical-mercator.html"/>
+    <summary>Shows the use of the Spherical Mercator Layers, for overlaying Google, Microsoft, and other layers with XYZ tiles.</summary>
+    <updated>2012-05-22T10:07:18+0200</updated>
+    <author>
+      <name>Éric Lemoine</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/spherical-mercator.html#2012-05-22T10:07:18+0200</id>
+  </entry>
+  <entry>
+    <title>Overview Map</title>
+    <tags>overview, mapOptions, basic</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/overviewmap.html"/>
+    <summary>Enable a small Overview Map that moves/interacts with your main map.</summary>
+    <updated>2012-05-21T08:44:38+0200</updated>
+    <author>
+      <name>Frederic Junod</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/overviewmap.html#2012-05-21T08:44:38+0200</id>
+  </entry>
+  <entry>
+    <title>OpenLayers with MapQuest Tiles</title>
+    <tags>MapQuest, OSM, XYZ</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/mapquest.html"/>
+    <summary>This example demonstrates the use of MapQuest tiles with OpenLayers.</summary>
+    <updated>2012-05-17T11:06:21-0600</updated>
+    <author>
+      <name>tschaub</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/mapquest.html#2012-05-17T11:06:21-0600</id>
+  </entry>
+  <entry>
+    <title>Drawing Simple Vector Features Example</title>
+    <tags>vector, feature, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/vector-features.html"/>
+    <summary>Shows the use of the shows drawing simple vector features, in different styles.</summary>
+    <updated>2012-05-15T12:46:41+0200</updated>
+    <author>
+      <name>Frederic Junod</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/vector-features.html#2012-05-15T12:46:41+0200</id>
+  </entry>
+  <entry>
+    <title>Reading Features From CartoDB using GeoJSON</title>
+    <tags>protocol, script, cartodb</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/cartodb-geojson.html"/>
+    <summary>Demonstrates how to load features on OpenLayers using CartoDB SQL API.</summary>
+    <updated>2012-05-07T13:06:14+0200</updated>
+    <author>
+      <name>Frederic Junod</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/cartodb-geojson.html#2012-05-07T13:06:14+0200</id>
+  </entry>
+  <entry>
+    <title>OpenLayers Select and Highlight Feature Example</title>
+    <tags>select, highlight, hover, onmouseover, click, vector</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/highlight-feature.html"/>
+    <summary>Select features on click, highlight features on hover.</summary>
+    <updated>2012-05-04T00:12:26+0200</updated>
+    <author>
+      <name>Éric Lemoine</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/highlight-feature.html#2012-05-04T00:12:26+0200</id>
+  </entry>
+  <entry>
+    <title>StyleMap Example</title>
+    <tags>vector, feature, stylemap, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/stylemap.html"/>
+    <summary>Shows how to use a StyleMap to style features with rule based styling. A style map references one or more OpenLayers.Style objects. These OpenLayers.Style objects are collections of OpenLayers.Rule objects that determine how features are styled. An OpenLayers.Rule object combines an OpenLayers.Filter object with a symbolizer. A filter is used to determine whether a rule applies for a given feature, and a symbolizer is used to draw the feature if the rule applies.</summary>
+    <updated>2012-04-02T15:08:45+0200</updated>
+    <author>
+      <name>Andy Allan</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/stylemap.html#2012-04-02T15:08:45+0200</id>
+  </entry>
+  <entry>
+    <title>Paging Strategy Example</title>
+    <tags>vector, feature, stylemap, paging, strategy, flickr, script</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/strategy-paging.html"/>
+    <summary>Uses a paging strategy to cache large batches of features and render a page at a time.</summary>
+    <updated>2012-03-28T14:13:31+0200</updated>
+    <author>
+      <name>Éric Lemoine</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/strategy-paging.html#2012-03-28T14:13:31+0200</id>
+  </entry>
+  <entry>
+    <title>Graticule Example</title>
+    <tags>graticule, grid, projection, proj4js, reproject, transform</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/graticule.html"/>
+    <summary>Adds a Graticule control to the map to display a grid of latitude and longitude.</summary>
+    <updated>2012-03-27T15:53:01+0100</updated>
+    <author>
+      <name>Peter Robins</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/graticule.html#2012-03-27T15:53:01+0100</id>
+  </entry>
+  <entry>
+    <title>Using Proj4JS for vector reprojection</title>
+    <tags>projection, proj, proj4js, reprojection, reproject, transform, transformation, epsg, srs</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/using-proj4js.html"/>
+    <summary>This example shows how to reproject vector features within OpenLayers. The baselayer shows Germany in the projection EPSG:31467 (GK 3). When one clicks on the buttons, features with geometries originally in EPSG:4326 will be transformed to the projection of the map on-the-fly.</summary>
+    <updated>2012-03-27T15:53:01+0100</updated>
+    <author>
+      <name>Peter Robins</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/using-proj4js.html#2012-03-27T15:53:01+0100</id>
+  </entry>
+  <entry>
+    <title>Basic MapBox OSM Example</title>
+    <tags>mapbox xyz osm</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/mapbox.html"/>
+    <summary>Shows how to use MapBox tiles in an OpenLayers map.</summary>
+    <updated>2012-03-27T14:34:19+0200</updated>
+    <author>
+      <name>Frederic Junod</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/mapbox.html#2012-03-27T14:34:19+0200</id>
+  </entry>
+  <entry>
+    <title>BBOX Strategy Example</title>
+    <tags>vector, feature, stylemap, bbox, strategy, script, flickr</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/strategy-bbox.html"/>
+    <summary>Uses a BBOX strategy to request features within a bounding box.</summary>
+    <updated>2012-03-24T00:13:06+0100</updated>
+    <author>
+      <name>Éric Lemoine</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/strategy-bbox.html#2012-03-24T00:13:06+0100</id>
+  </entry>
+  <entry>
+    <title>Reading Features From A Google Fusion Tables Table</title>
+    <tags>protocol, script, fusion tables</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/fusiontables.html"/>
+    <summary>Demonstrates how, with a custom read method, the script protocol and GeoJSON format can be used to read features stored in a table on Google Fusion Tables.</summary>
+    <updated>2012-03-22T11:42:39+0000</updated>
+    <author>
+      <name>Peter Robins</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/fusiontables.html#2012-03-22T11:42:39+0000</id>
+  </entry>
+  <entry>
+    <title>Layer Load Monitoring Example</title>
+    <tags>monitor, loading, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/layerLoadMonitoring.html"/>
+    <summary>Demonstrate a method for monitoring tile loading performance.</summary>
+    <updated>2012-03-22T02:13:32-0700</updated>
+    <author>
+      <name>Éric Lemoine</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/layerLoadMonitoring.html#2012-03-22T02:13:32-0700</id>
+  </entry>
+  <entry>
+    <title>OpenLayers Overlays Only Example</title>
+    <tags>overlay, baselayer, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/all-overlays.html"/>
+    <summary>Demonstrates a map with overlays only.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/all-overlays.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Attribution Example</title>
+    <tags>copyright, watermark, logo, attribution, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/attribution.html"/>
+    <summary>Shows the use of the attribution layer option on a number of layer types.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/attribution.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Basic Bing Tiles Example</title>
+    <tags>bing tiles, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/bing-tiles.html"/>
+    <summary>Use Bing with direct tile access</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/bing-tiles.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Bing Example</title>
+    <tags>Bing, Microsoft, Virtual Earth, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/bing.html"/>
+    <summary>Demonstrates the use of Bing layers.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/bing.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Boxes Example Vector</title>
+    <tags>box, vector, annotation, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/boxes-vector.html"/>
+    <summary>Demonstrate marker and box type annotations on a map.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/boxes-vector.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Buffer Example</title>
+    <tags>buffer, performance, tile, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/buffer.html"/>
+    <summary>This example shows the use of the buffer layer option for any layer that inherits from OpenLayers.Layer.Grid.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/buffer.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Client Zoom</title>
+    <tags>client zoom continuous zooming</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/clientzoom.html"/>
+    <summary>This example demonstrates the &lt;strong&gt;&quot;client zoom&quot;&lt;/strong&gt; functionality, where OpenLayers stretches the layer div when the resolution is not supported by that layer's tile service.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/clientzoom.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Custom Control Example</title>
+    <tags>control, panel, rectangle, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/custom-control.html"/>
+    <summary>Demonstrate the addition of a rectangle to the OpenLayers window.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/custom-control.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>OpenLayers Example</title>
+    <tags>simple, basic, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/example.html"/>
+    <summary>Demonstrate a simple map with an overlay that includes layer switching controls.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/example.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>GeoJSON Example</title>
+    <tags>JSON, GeoJSON, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/geojson.html"/>
+    <summary>Demonstrate the use of the GeoJSON format.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/geojson.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Google (Static Maps API) Grid Layer Example</title>
+    <tags>Google, grid, static, GMaps, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/google-static.html"/>
+    <summary>Using the Google Static Maps API with a Grid Layer.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/google-static.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Named Graphics Example</title>
+    <tags>vector, named graphic, star, cross, x, square, triangle, circle, style, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/graphic-name.html"/>
+    <summary>Shows how to use well-known graphic names.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/graphic-name.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Gutter Example</title>
+    <tags>gutter, quality, tile, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/gutter.html"/>
+    <summary>Demonstrates OpenLayer's facility for dealing with tiling artifacts.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/gutter.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Late Rendering</title>
+    <tags>creation, render, div, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/late-render.html"/>
+    <summary>Demonstrates how a map can be rendered to an empty container after construction by calling the render method.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/late-render.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Layer Opacity Example</title>
+    <tags>opacity, transparent, transparency, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/layer-opacity.html"/>
+    <summary>Demonstrate a change in the opacity for an overlay layer.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/layer-opacity.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Layer Switcher Example</title>
+    <tags>tree, layerswitcher, reposition, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/layerswitcher.html"/>
+    <summary>Demonstrates the use of the LayerSwitcher outside of the OpenLayers window.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/layerswitcher.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Multiple Server URLS</title>
+    <tags>performance, multiple urls, request, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/multiserver.html"/>
+    <summary>Load your tiles faster by pointing to the same server, but with different urls</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/multiserver.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Navigation Control</title>
+    <tags>drag, move, zoom, navigate, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/navigation-control.html"/>
+    <summary>Demonstrate Navigation Control features</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/navigation-control.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Grayscale OSM Example</title>
+    <tags>openstreetmap canvas grayscale light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/osm-grayscale.html"/>
+    <summary>Show an OSM Map in grayscale</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/osm-grayscale.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Basic OSM Example</title>
+    <tags>openstreetmap basic light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/osm.html"/>
+    <summary>Show a Simple OSM Map</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/osm.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Resize Features Programatically</title>
+    <tags>vector, feature, resizing, resize, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/resize-features.html"/>
+    <summary>Demonstration of how to use the geometry resize methods to change feature sizes programatically.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/resize-features.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>OpenLayers Restricted Extent Example</title>
+    <tags>map, restrict, restrictedextent, extent, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/restricted-extent.html"/>
+    <summary>Don't let users drag outside the map extent: instead, limit dragging such that the extent of the layer is the maximum viewable area.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/restricted-extent.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Rotate vector features</title>
+    <tags>vector, feature, rotating, rotation, rotate, advanced, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/rotate-features.html"/>
+    <summary>Details on how to create and rotate vector features programmatically</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/rotate-features.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>OpenLayers Select Feature on Multiple Layers Example</title>
+    <tags>vector, feature, selecting, selection, advanced, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/select-feature-multilayer.html"/>
+    <summary>Select a feature on click with the Control.SelectFeature on multiple vector layers.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/select-feature-multilayer.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Single Tile Example</title>
+    <tags>tile, ratio, singleTile, performance, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/single-tile.html"/>
+    <summary>Use the singleTile option on gridded layers to request a single tile.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/single-tile.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Rule Based Style</title>
+    <tags>vector, feature, stylemap, filter, comparison, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/style-rules.html"/>
+    <summary>Use rule based styling to use different symbolizers for different feature groups.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/style-rules.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Feature Styles Example</title>
+    <tags>vector, feature, stylemap, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/styles-context.html"/>
+    <summary>To style features with a custom function that evaluates each feature, use the context option of an OpenLayers.Style object. If the context object contains a function and this function is referenced in a symbolizer, the function will be called with the feature as an argument..</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/styles-context.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Rotation Style Example</title>
+    <tags>vector, feature, stylemap, rotation, cleanup, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/styles-rotation.html"/>
+    <summary>Use the rotation property of a point symbolizer to rotate point symbolizers.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/styles-rotation.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Unique Value Styles Example</title>
+    <tags>vector, feature, stylemap, uniquevalue, cleanup, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/styles-unique.html"/>
+    <summary>Shows how to create a style based on unique feature attribute values (markers) and feature state values (circles).</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/styles-unique.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>OpenLayers Example</title>
+    <tags>vector, feature, symbolizer, filter, comparison, labeling, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/symbolizers-fill-stroke-graphic.html"/>
+    <summary>Demonstrate fill, stroke, and graphic property of symbolizers.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/symbolizers-fill-stroke-graphic.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Tile Origin</title>
+    <tags>grid, tileOrigin, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/tile-origin.html"/>
+    <summary>Demonstrates the use of the tileExtent property to differentiate between the maximum extent and the tile extent for a layer.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/tile-origin.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Transition Example</title>
+    <tags>transition, resize, tile, singletile, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/transition.html"/>
+    <summary>Demonstrates the use of transition effects in tiled and untiled layers.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/transition.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>OpenLayers Labeled features example</title>
+    <tags>vector, feature, labeling, symbolizer, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/vector-features-with-text.html"/>
+    <summary>Label vector features with a text symbolizer.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/vector-features-with-text.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>WMS Untiled Example</title>
+    <tags>singletile, tile, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/wms-untiled.html"/>
+    <summary>Shows an example of an &quot;untiled&quot; WMS layer, which requests a single image for the entire map view.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/wms-untiled.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>WMS version 1.3 (axis order) Example</title>
+    <tags>axis order, wms 1.3, light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/wms-v13.html"/>
+    <summary>Shows an example of the influence of axis order on WMS 1.3 GetMap requests.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/wms-v13.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>Zoom Control Example</title>
+    <tags>zoom control light</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/zoom.html"/>
+    <summary>Shows how to use a simple zoom control.</summary>
+    <updated>2012-03-20T22:29:58-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/zoom.html#2012-03-20T22:29:58-0500</id>
+  </entry>
+  <entry>
+    <title>OpenLayers Light - Basic Popups</title>
+    <tags>light, vector, feature, popup</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/light-basic.html"/>
+    <summary>A basic use case example using the OpenLayers.light version of the library.&lt;br /&gt; Shows popup info bubble when hovering over features on the map</summary>
+    <updated>2012-03-20T20:16:03-0500</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/light-basic.html#2012-03-20T20:16:03-0500</id>
+  </entry>
+  <entry>
+    <title>Cache Read Example</title>
+    <tags>mobile, local storage, persistence, cache, html5</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/cache-read.html"/>
+    <summary>Caching viewed tiles</summary>
+    <updated>2012-03-18T13:18:58+0100</updated>
+    <author>
+      <name>ahocevar</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/cache-read.html#2012-03-18T13:18:58+0100</id>
+  </entry>
+  <entry>
+    <title>Cache Write Example</title>
+    <tags>mobile, local storage, persistence, cache, html5</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/cache-write.html"/>
+    <summary>Caching viewed tiles</summary>
+    <updated>2012-03-18T13:18:58+0100</updated>
+    <author>
+      <name>ahocevar</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/cache-write.html#2012-03-18T13:18:58+0100</id>
+  </entry>
+  <entry>
+    <title>Offline Storage Example</title>
+    <tags>mobile, local storage, persistence, cache, html5</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/offline-storage.html"/>
+    <summary>Caching viewed tiles</summary>
+    <updated>2012-03-18T13:18:58+0100</updated>
+    <author>
+      <name>ahocevar</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/offline-storage.html#2012-03-18T13:18:58+0100</id>
+  </entry>
+  <entry>
+    <title>OpenLayers UTFGrid Geography Class Example</title>
+    <tags>utfgrid-geography-class.html</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/utfgrid-geography-class.html"/>
+    <summary>This page demonstrates the use of the OpenLayers UTFGrid Controls.</summary>
+    <updated>2012-03-06T00:08:20-0700</updated>
+    <author>
+      <name>Tim Schaub</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/utfgrid-geography-class.html#2012-03-06T00:08:20-0700</id>
+  </entry>
+  <entry>
+    <title>TileCache Example</title>
+    <tags>tile, cache, tilecache, wmsc, wms-c</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/tilecache.html"/>
+    <summary>Demonstrates a TileCache layer that loads tiles from from a web accessible disk-based cache only.</summary>
+    <updated>2012-03-05T22:27:43+0100</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/tilecache.html#2012-03-05T22:27:43+0100</id>
+  </entry>
+  <entry>
+    <title>Script Protocol With XML</title>
+    <tags>protocol, script, cross origin, xml, advanced</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/cross-origin-xml.html"/>
+    <summary>Demonstrates how, with a custom parseFeatures method, the script protocol can be used with YQL for cross-origin loading of files in any of the XML formats supported by OpenLayers.</summary>
+    <updated>2012-03-04T12:43:15+0000</updated>
+    <author>
+      <name>Peter Robins</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/cross-origin-xml.html#2012-03-04T12:43:15+0000</id>
+  </entry>
+  <entry>
+    <title>OpenLayers UTFGrid Demo</title>
+    <tags>utfgrid.html</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/utfgrid.html"/>
+    <summary>This page demonstrates the use of the OpenLayers UTFGrid Controls.</summary>
+    <updated>2012-03-04T01:57:46-0700</updated>
+    <author>
+      <name>Tim Schaub</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/utfgrid.html#2012-03-04T01:57:46-0700</id>
+  </entry>
+  <entry>
+    <title>OpenLayers Multiple UTFGrid Demo</title>
+    <tags>utfgrid_twogrids.html</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/utfgrid_twogrids.html"/>
+    <summary>This page demonstrates the use of the OpenLayers UTFGrid Controls with more than one UTFGrid Layer.</summary>
+    <updated>2012-03-03T15:45:39-0700</updated>
+    <author>
+      <name>Tim Schaub</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/utfgrid_twogrids.html#2012-03-03T15:45:39-0700</id>
+  </entry>
+  <entry>
+    <title>An accessible click control implementation</title>
+    <tags>click, control, accessibility</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/accessible-click-control.html"/>
+    <summary>accessible-click-control.html</summary>
+    <updated>2012-02-28T10:48:50+0100</updated>
+    <author>
+      <name>Éric Lemoine</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/accessible-click-control.html#2012-02-28T10:48:50+0100</id>
+  </entry>
+  <entry>
+    <title>OSM + Google Maps + KML Reprojection</title>
+    <tags>osm, kml, spherical, mercator, reprojection, feature, popup, advanced</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/sundials-spherical-mercator.html"/>
+    <summary>Demonstrates loading and displaying a KML file on top of OpenStreetMap (OSM) and Google Maps data. Loads data from a KML file of sundials.</summary>
+    <updated>2012-02-16T09:20:41+0100</updated>
+    <author>
+      <name>fredj</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/sundials-spherical-mercator.html#2012-02-16T09:20:41+0100</id>
+  </entry>
+  <entry>
+    <title>Basic ESRI Map Cache Example</title>
+    <tags>XYZ, layer, tile</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/xyz-esri.html"/>
+    <summary>Show a Simple ESRI map using the layer from &lt;a href=&quot;http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer&quot;&gt;ESRI's server&lt;/a&gt;.</summary>
+    <updated>2012-02-16T08:50:17+0400</updated>
+    <author>
+      <name>_DR_</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/xyz-esri.html#2012-02-16T08:50:17+0400</id>
+  </entry>
+  <entry>
+    <title>OpenLayers Draw Feature Example</title>
+    <tags>point, line, linestring, polygon, box, digitizing, geometry, draw, drag</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/draw-feature.html"/>
+    <summary>Demonstrate on-screen digitizing tools for point, line, polygon and box creation.</summary>
+    <updated>2012-02-13T09:42:09+0100</updated>
+    <author>
+      <name>Bart van den Eijnden</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/draw-feature.html#2012-02-13T09:42:09+0100</id>
+  </entry>
+  <entry>
+    <title>OpenLayers Modify Feature Example</title>
+    <tags>vertices, digitizing, draw, drawing</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/modify-feature.html"/>
+    <summary>A demonstration of the ModifyFeature control for editing vector features.</summary>
+    <updated>2012-02-09T13:43:42+0100</updated>
+    <author>
+      <name>fredj</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/modify-feature.html#2012-02-09T13:43:42+0100</id>
+  </entry>
+  <entry>
+    <title>Custom and accessible panel</title>
+    <tags>panels, CSS, style, accessibility, button</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/accessible-panel.html"/>
+    <summary>Create a custom and accessible panel, styled entirely with CSS.</summary>
+    <updated>2012-02-08T10:05:21+0100</updated>
+    <author>
+      <name>Éric Lemoine</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/accessible-panel.html#2012-02-08T10:05:21+0100</id>
+  </entry>
+  <entry>
+    <title>City of Vienna WMTS for Desktop and Mobile Devices</title>
+    <tags>mobile, vienna, ogdwien, rest, restful, wmts, geolocate, permalink</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/mobile-wmts-vienna.html"/>
+    <summary>A full-screen map for both desktop and mobile devices. Uses language dependent CSS content and the WMTSCapabilities format to retrieve layers from the ogdwien open data initiative of the City of Vienna. Also has a lightweight custom anchor permalink functionality and uses the Geolocate control.</summary>
+    <updated>2012-01-30T09:43:25+0100</updated>
+    <author>
+      <name>ahocevar</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/mobile-wmts-vienna.html#2012-01-30T09:43:25+0100</id>
+  </entry>
+  <entry>
+    <title>Vector Feature Transformation Box Example</title>
+    <tags>vector, feature, transformation, stylemap</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/transform-feature.html"/>
+    <summary>Shows the use of the TransformFeature control.</summary>
+    <updated>2012-01-27T12:31:18+0100</updated>
+    <author>
+      <name>fredj</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/transform-feature.html#2012-01-27T12:31:18+0100</id>
+  </entry>
+  <entry>
+    <title>Accessible Example</title>
+    <tags>keyboard, pan, panning, zoom, zooming, accesskey</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/accessible.html"/>
+    <summary>Demonstrate the KeyboardDefaults control and how to use links with Access Keys to navigate the map with the keyboard.</summary>
+    <updated>2012-01-26T13:11:33+0100</updated>
+    <author>
+      <name>Éric Lemoine</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/accessible.html#2012-01-26T13:11:33+0100</id>
+  </entry>
+  <entry>
+    <title>Full Screen Example</title>
+    <tags>css, style, fullscreen, window, margin, padding, scrollbar</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/fullScreen.html"/>
+    <summary>Demonstrate a map that fills the entire browser window.</summary>
+    <updated>2012-01-02T16:07:40-0700</updated>
+    <author>
+      <name>tschaub</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/fullScreen.html#2012-01-02T16:07:40-0700</id>
+  </entry>
+  <entry>
+    <title>Map Controls Example</title>
+    <tags>control, basic</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/controls.html"/>
+    <summary>Attach zooming, panning, layer switcher, overview map, and permalink map controls to an OpenLayers window.</summary>
+    <updated>2011-12-09T00:11:16+0100</updated>
+    <author>
+      <name>Éric Lemoine</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/controls.html#2011-12-09T00:11:16+0100</id>
+  </entry>
+  <entry>
+    <title>Popup Matrix</title>
+    <tags>popup, popups</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/popupMatrix.html"/>
+    <summary>All kinds of different popup configurations.</summary>
+    <updated>2011-12-09T00:03:46+0100</updated>
+    <author>
+      <name>Éric Lemoine</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/popupMatrix.html#2011-12-09T00:03:46+0100</id>
+  </entry>
+  <entry>
+    <title>OpenLayers ArcGIS Cache Example (Autoconfigure with JSONP)</title>
+    <tags>arcgis, arcgiscache, cache, tms, jsonp</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/arcgiscache_jsonp.html"/>
+    <summary>Demonstrates the basic initialization of the ArcGIS Cache layer by using the server capabilities object.</summary>
+    <updated>2011-11-30T22:33:27+0100</updated>
+    <author>
+      <name>Bart van den Eijnden</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/arcgiscache_jsonp.html#2011-11-30T22:33:27+0100</id>
+  </entry>
+  <entry>
+    <title>GeoRSS from Flickr in OpenLayers</title>
+    <tags>georss, style, styling, marker, flickr, thumbnail, image, rule</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/georss-flickr.html"/>
+    <summary>Display a flickr-feed on top of the map</summary>
+    <updated>2011-11-18T11:24:33+0100</updated>
+    <author>
+      <name>fredj</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/georss-flickr.html#2011-11-18T11:24:33+0100</id>
+  </entry>
+  <entry>
+    <title>GML Layer Example</title>
+    <tags>GML</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/gml-layer.html"/>
+    <summary>Loads locally stored GML vector data on a basemap. Includes GML example file.</summary>
+    <updated>2011-11-18T11:24:33+0100</updated>
+    <author>
+      <name>fredj</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/gml-layer.html#2011-11-18T11:24:33+0100</id>
+  </entry>
+  <entry>
+    <title>Custom Control.Panel</title>
+    <tags>panels, CSS, style, basic</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/panel.html"/>
+    <summary>Create a custom control.panel, styled entirely with CSS, and add your own controls to it.</summary>
+    <updated>2011-11-08T18:32:55-0700</updated>
+    <author>
+      <name>tschaub</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/panel.html#2011-11-08T18:32:55-0700</id>
+  </entry>
+  <entry>
+    <title>Zoomify Layer Example</title>
+    <tags>zoomify, layer</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/zoomify.html"/>
+    <summary>Demo of a layer with Zoomify tiles.</summary>
+    <updated>2011-11-08T18:32:55-0700</updated>
+    <author>
+      <name>tschaub</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/zoomify.html#2011-11-08T18:32:55-0700</id>
+  </entry>
+  <entry>
+    <title>Bing Tiles with a Subset of Resolutions Example</title>
+    <tags>bing tiles restrictedMinZoom numZoomLevels</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/bing-tiles-restrictedzoom.html"/>
+    <summary>Use Bing with direct tile access</summary>
+    <updated>2011-11-07T10:48:52+0100</updated>
+    <author>
+      <name>Frederic Junod</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/bing-tiles-restrictedzoom.html#2011-11-07T10:48:52+0100</id>
+  </entry>
+  <entry>
+    <title>Feature Hit Detection with Canvas</title>
+    <tags>canvas-hit-detection.html</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/canvas-hit-detection.html"/>
+    <summary>Demonstrates detection of feature hits with the canvas renderer.</summary>
+    <updated>2011-11-07T10:48:52+0100</updated>
+    <author>
+      <name>Frederic Junod</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/canvas-hit-detection.html#2011-11-07T10:48:52+0100</id>
+  </entry>
+  <entry>
+    <title>Undo/Redo Drawing</title>
+    <tags>draw-undo-redo.html</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/draw-undo-redo.html"/>
+    <summary>Demonstrates the use of undo &amp;amp; redo methods while drawing.</summary>
+    <updated>2011-11-07T10:48:52+0100</updated>
+    <author>
+      <name>Frederic Junod</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/draw-undo-redo.html#2011-11-07T10:48:52+0100</id>
+  </entry>
+  <entry>
+    <title>Editing Methods</title>
+    <tags>editing-methods.html</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/editing-methods.html"/>
+    <summary>Demonstrates the use of editing methods for manipulating geometries while drawing.</summary>
+    <updated>2011-11-07T10:48:52+0100</updated>
+    <author>
+      <name>Frederic Junod</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/editing-methods.html#2011-11-07T10:48:52+0100</id>
+  </entry>
+  <entry>
+    <title>Point Grid Example</title>
+    <tags>point grid</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/point-grid.html"/>
+    <summary>Use a PointGrid layer to display a grid of regularly spaced points</summary>
+    <updated>2011-11-07T10:48:52+0100</updated>
+    <author>
+      <name>Frederic Junod</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/point-grid.html#2011-11-07T10:48:52+0100</id>
+  </entry>
+  <entry>
+    <title>Snap Grid Example</title>
+    <tags>snap grid</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/snap-grid.html"/>
+    <summary>Use a PointGrid layer and a Snapping control to snap to a grid of regularly spaced points</summary>
+    <updated>2011-11-07T10:48:52+0100</updated>
+    <author>
+      <name>Frederic Junod</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/snap-grid.html#2011-11-07T10:48:52+0100</id>
+  </entry>
+  <entry>
+    <title>KML Parser Example</title>
+    <tags>KML, parsing, format</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/KMLParser.html"/>
+    <summary>Demonstrate the operation of the KML parser.</summary>
+    <updated>2011-10-23T14:24:30+0700</updated>
+    <author>
+      <name>rda</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/KMLParser.html#2011-10-23T14:24:30+0700</id>
+  </entry>
+  <entry>
+    <title>MapGuide Layer Example</title>
+    <tags>MapGuide, basic</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/mapguide.html"/>
+    <summary>Demonstrates how to create MapGuide tiled and untiled layers.</summary>
+    <updated>2011-10-23T14:24:30+0700</updated>
+    <author>
+      <name>rda</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/mapguide.html#2011-10-23T14:24:30+0700</id>
+  </entry>
+  <entry>
+    <title>mvs.html</title>
+    <tags>mvs.html</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/mvs.html"/>
+    <summary>mvs.html</summary>
+    <updated>2011-10-23T14:24:30+0700</updated>
+    <author>
+      <name>rda</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/mvs.html#2011-10-23T14:24:30+0700</id>
+  </entry>
+  <entry>
+    <title>WMSDescribeLayer Parser Example</title>
+    <tags>wmsdescribelayer, parser, cleanup</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/WMSDescribeLayerParser.html"/>
+    <summary>Demonstrate the operation of the WMSDescribeLayer parser.</summary>
+    <updated>2011-10-23T14:24:30+0700</updated>
+    <author>
+      <name>rda</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/WMSDescribeLayerParser.html#2011-10-23T14:24:30+0700</id>
+  </entry>
+  <entry>
+    <title>multitouch.html</title>
+    <tags>multitouch.html</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/multitouch.html"/>
+    <summary>multitouch.html</summary>
+    <updated>2011-09-15T20:18:33+0000</updated>
+    <author>
+      <name>crschmidt</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/multitouch.html#2011-09-15T20:18:33+0000</id>
+  </entry>
+  <entry>
+    <title>Vector Formats Example</title>
+    <tags>vector, geojson, atom, kml, georss, gml, wkt, advanced, spherical, mercator</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/vector-formats.html"/>
+    <summary>Shows the wide variety of vector formats that open layers supports.</summary>
+    <updated>2011-09-15T12:27:56+0000</updated>
+    <author>
+      <name>pgiraud</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/vector-formats.html#2011-09-15T12:27:56+0000</id>
+  </entry>
+  <entry>
+    <title>OpenLayers Measure Example</title>
+    <tags>measuring, geodesic, area, length, distance</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/measure.html"/>
+    <summary>Demonstrates the measure control to measure distances and areas.</summary>
+    <updated>2011-09-07T16:00:09+0000</updated>
+    <author>
+      <name>Frédéric Junod</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/measure.html#2011-09-07T16:00:09+0000</id>
+  </entry>
+  <entry>
+    <title>Wrapping the Date Line</title>
+    <tags>WMS, MapServer, wrapDateLine</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/wrapDateLine.html"/>
+    <summary>Shows how to work around dateline issues, by wrapping the dateline on a number of layer types.</summary>
+    <updated>2011-08-08T08:19:06+0000</updated>
+    <author>
+      <name>Frédéric Junod</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/wrapDateLine.html#2011-08-08T08:19:06+0000</id>
+  </entry>
+  <entry>
+    <title>XML Format Example</title>
+    <tags>xml</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/xml.html"/>
+    <summary>Shows the use of the OpenLayers XML format class</summary>
+    <updated>2011-08-03T15:55:14+0000</updated>
+    <author>
+      <name>Frédéric Junod</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/xml.html#2011-08-03T15:55:14+0000</id>
+  </entry>
+  <entry>
+    <title>KML Layer Example</title>
+    <tags>kml, popup, feature</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/sundials.html"/>
+    <summary>Demonstrates loading and displaying a KML file on top of a basemap.</summary>
+    <updated>2011-07-25T08:52:15+0000</updated>
+    <author>
+      <name>ahocevar</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/sundials.html#2011-07-25T08:52:15+0000</id>
+  </entry>
+  <entry>
+    <title>Styled Layer Descriptor (SLD) Example</title>
+    <tags>vector, feature, sld, styling, style</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/sld.html"/>
+    <summary>Parsing SLD and applying styles to a vector layer.</summary>
+    <updated>2011-07-19T10:09:58+0000</updated>
+    <author>
+      <name>ahocevar</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/sld.html#2011-07-19T10:09:58+0000</id>
+  </entry>
+  <entry>
+    <title>Scale Dependent Labels Example</title>
+    <tags>label, scale, stylemap</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/label-scale.html"/>
+    <summary>Demonstrates how to use a StyleMap for displaying scale dependent labels.</summary>
+    <updated>2011-07-12T16:48:39+0000</updated>
+    <author>
+      <name>Tim Schaub</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/label-scale.html#2011-07-12T16:48:39+0000</id>
+  </entry>
+  <entry>
+    <title>SLD based selection on WMS layers</title>
+    <tags>sld, sldselect, styling, style</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/SLDSelect.html"/>
+    <summary>Using Styled Layer Descriptors to make a selection on WMS layers</summary>
+    <updated>2011-07-03T09:20:47+0000</updated>
+    <author>
+      <name>ahocevar</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/SLDSelect.html#2011-07-03T09:20:47+0000</id>
+  </entry>
+  <entry>
+    <title>WFS Protocol and Filter</title>
+    <tags>filter, wfs, spatial</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/wfs-spatial-filter.html"/>
+    <summary>Demonstrates the use of a spatial filter in making GetFeature requests using the WFS protocol.</summary>
+    <updated>2011-06-15T20:55:08+0000</updated>
+    <author>
+      <name>Tim Schaub</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/wfs-spatial-filter.html#2011-06-15T20:55:08+0000</id>
+  </entry>
+  <entry>
+    <title>Accelerometer</title>
+    <tags>browser, vendor, mobile, orientation</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/accelerometer.html"/>
+    <summary>The goal of this script is to demonstrate the usage of accelerometer.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/accelerometer.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>AnchorPermalink Example</title>
+    <tags>anchor, permalink</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/anchor-permalink.html"/>
+    <summary>Place a permalink in the anchor of the url.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/anchor-permalink.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>map.panTo Example</title>
+    <tags>panning, animation, effect, smooth, panMethod</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/animated_panning.html"/>
+    <summary>Show animated panning effects in the map</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/animated_panning.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>ArcGIS Server 9.3 Rest API Example</title>
+    <tags>ESRI, ArcGIS, REST, filter</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/arcgis93rest.html"/>
+    <summary>Shows the basic use of openlayers using an ArcGIS Server 9.3 Rest API layer</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/arcgis93rest.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>ArcIMS Thematic Example</title>
+    <tags>ESRI, ArcIMS, ArcXML, style, thematic, chloropleth, representation</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/arcims-thematic.html"/>
+    <summary>Shows the advanced use of OpenLayers using a thematic ArcIMS layer</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/arcims-thematic.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>ArcIMS Example</title>
+    <tags>ESRI, ArcIMS</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/arcims.html"/>
+    <summary>Shows the basic use of OpenLayers using an ArcIMS layer</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/arcims.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Vector Behavior Example (Fixed/HTTP/GML)</title>
+    <tags>vector, strategy, strategies, protocoll, advanced, gml, http, fixed</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/behavior-fixed-http-gml.html"/>
+    <summary>Vector layer with a Fixed strategy, HTTP protocol, and GML format.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/behavior-fixed-http-gml.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Boxes Example</title>
+    <tags>box, annotation</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/boxes.html"/>
+    <summary>Demonstrate marker and box type annotations on a map.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/boxes.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Browser detection</title>
+    <tags>browser, vendor, mobile, events, HTML5, gesture, touch</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/browser.html"/>
+    <summary>The goal of this script is to inform about the capacity of the browser used by the user.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/browser.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Canvas Renderer Example</title>
+    <tags>canvas, renderer, advanced,</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/canvas.html"/>
+    <summary>Demonstrates the use of the canvas renderer with a vector layer.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/canvas.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Click Handler Example</title>
+    <tags>event, events, propagation, advanced</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/click-handler.html"/>
+    <summary>This example shows the use of the click handler.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/click-handler.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>CQL Filter Example</title>
+    <tags>CQL, filter</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/cql-format.html"/>
+    <summary>Demonstrate use the CQL filter.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/cql-format.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Script Protocol</title>
+    <tags>protocol, script, cross origin, advanced</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/cross-origin.html"/>
+    <summary>Demonstrates the use of a script protocol for making feature requests cross origin.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/cross-origin.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Custom Style Example</title>
+    <tags>styling, css, stylesheet, theming, theme</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/custom-style.html"/>
+    <summary>Demonstrate changing CSS styles on controls in the OpenLayers window.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/custom-style.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Debug Example</title>
+    <tags>debugging, error, fix, fixing, console, firebug, developers, advanced</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/debug.html"/>
+    <summary>Demonstrate console calls to a Firebug console. Requires Firefox. Mostly for developers.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/debug.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>OpenLayers Document Drag Example</title>
+    <tags>drag</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/document-drag.html"/>
+    <summary>Keep on dragging even when the mouse cursor moves outside of the map</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/document-drag.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Drawing Holes in Polygons</title>
+    <tags>draw polygon hole</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/donut.html"/>
+    <summary>The DrawFeature control can be used to digitize donut polygons.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/donut.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Drag Feature Example</title>
+    <tags>point, line, linestring, polygon, digitizing, geometry, draw, drag</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/drag-feature.html"/>
+    <summary>Demonstrates point, line and polygon creation and editing.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/drag-feature.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Dynamic POIs via a Text Layer</title>
+    <tags>poi, dynamic data, text, format, strategy, popup, select, selection</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/dynamic-text-layer.html"/>
+    <summary>Loading dynamic data from a text file.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/dynamic-text-layer.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>OpenLayers EditingToolbar Outside Viewport</title>
+    <tags>digitizing, point, line, linestring, polygon, editing, positioning, style</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/editingtoolbar-outside.html"/>
+    <summary>Display an editing toolbar panel outside the map viewport.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/editingtoolbar-outside.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Editing Toolbar Example</title>
+    <tags>digitizing, point, line, linestring, polygon, editing</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/editingtoolbar.html"/>
+    <summary>Demonstrate polygon, polyline and point creation and editing tools.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/editingtoolbar.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Event Handling</title>
+    <tags>event, events, handler, listener, cleanup</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/events.html"/>
+    <summary>Demonstrating various styles of event handling in OpenLayers.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/events.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Filter Strategy</title>
+    <tags>filter, strategy, strategies, kml, advanced</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/filter-strategy.html"/>
+    <summary>Demonstrates the filter strategy for limiting features passed to the layer.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/filter-strategy.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Filter Encoding</title>
+    <tags>filter, format, comparison, filter encoding, fe, logical, attribute, attributive, spatial, advanced</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/filter.html"/>
+    <summary>Using the filter format write out filter objects.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/filter.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Fractional Zoom Example</title>
+    <tags>zoomlevel, unlimited zoom, scale</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/fractional-zoom.html"/>
+    <summary>Shows the use of a map with fractional (or non-discrete) zoom levels.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/fractional-zoom.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Geolocation Example</title>
+    <tags>geolocation, geolocate, mobile</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/geolocation.html"/>
+    <summary>Track current position and display it with its accuracy.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/geolocation.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>GeoRSS Marker Example</title>
+    <tags>georss, style, styling, marker, flickr, image</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/georss-markers.html"/>
+    <summary>Demonstrate loading a GeoRSS feed using the GeoRSS parser.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/georss-markers.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>GeoRSS Example</title>
+    <tags>georss, style, styling, marker</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/georss.html"/>
+    <summary>Display a couple of locally cached georss feeds on an a basemap.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/georss.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>WFS GetFeature Example (GeoServer)</title>
+    <tags>WFS, GetFeature</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/getfeature-wfs.html"/>
+    <summary>Shows how to use the GetFeature control to select features from a WMS layer.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/getfeature-wfs.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Feature Info in Popup</title>
+    <tags>WMS, GetFeatureInfo, popup</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/getfeatureinfo-popup.html"/>
+    <summary>Demonstrates the WMSGetFeatureInfo control for fetching information about a position from WMS (via GetFeatureInfo request). Results are displayed in a popup.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/getfeatureinfo-popup.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Google Layer Example</title>
+    <tags>Google</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/google.html"/>
+    <summary>Demonstrate use of the various types of Google layers.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/google.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Hover Handler Example</title>
+    <tags>hover, onmouseover, handler, listener, event, events</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/hover-handler.html"/>
+    <summary>This example shows the use of the hover handler.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/hover-handler.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Image Layer Example</title>
+    <tags>image, imagelayer</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/image-layer.html"/>
+    <summary>Demonstrate a single non-tiled image as a selectable base layer.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/image-layer.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>OpenLayers Geometry Intersection Example</title>
+    <tags>intersection, geometry</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/intersects.html"/>
+    <summary>Use of geometry.intersects method for testing geometry intersections.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/intersects.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>KaMap Example</title>
+    <tags>KaMap</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/kamap.html"/>
+    <summary>Demonstrate a tiled kamap layer as the base map, which can be pre-cached for higher performance.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/kamap.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Kinetic Dragging Example</title>
+    <tags>kinetic, dragging</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/kinetic.html"/>
+    <summary>Demonstrates Kinetic Dragging.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/kinetic.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>KML Layer Example</title>
+    <tags>KML</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/kml-layer.html"/>
+    <summary>Demonstrates loading and displaying a KML file on top of a basemap.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/kml-layer.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Parsing gx:Track in KML</title>
+    <tags>kml-pointtrack.html</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/kml-pointtrack.html"/>
+    <summary>Demonstrates populating a PointTrack layer with gx:Track elements from KML.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/kml-pointtrack.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Parsing gx:Track in KML</title>
+    <tags>KML, parser, parsing, tracks</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/kml-track.html"/>
+    <summary>Demonstrates parsing of gx:Track elements from KML.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/kml-track.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Basic Single WMS Example</title>
+    <tags>basic, simple, minimal, cleanup</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/lite.html"/>
+    <summary>Show a Simple Map</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/lite.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>MapServer Layer</title>
+    <tags>UMN Mapserver, tile, tiled</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/mapserver.html"/>
+    <summary>Shows MapServer Layer</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/mapserver.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>MapServer Single Tile Mode</title>
+    <tags>UMN Mapserver, basic, singleTile</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/mapserver_untiled.html"/>
+    <summary>Shows single tile MapServer Layer</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/mapserver_untiled.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Resize a Marker</title>
+    <tags>animation, resizing, style, size</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/markerResize.html"/>
+    <summary>Dynamically resize a marker</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/markerResize.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Markers Layer Example</title>
+    <tags>Marker, event, mousedown, popup, inco</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/markers.html"/>
+    <summary>Show markers layer with different markers</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/markers.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Using a Layer.Text to display markers</title>
+    <tags>textlayer, csv, tsv, basic, popup</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/markersTextLayer.html"/>
+    <summary>The Layer.Text class reads a Tab seperated values file and displays it as markers on the map.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/markersTextLayer.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>OpenLayers Mousewheel Interval Example</title>
+    <tags>performance, zoom by wheel</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/mousewheel-interval.html"/>
+    <summary>Let OpenLayers send less tile requests to the server when wheel-zooming.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/mousewheel-interval.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Map Navigation History Example</title>
+    <tags>history, basic</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/navigation-history.html"/>
+    <summary>A control for zooming to previous and next map extents.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/navigation-history.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>A navToolbar with an alwaysZoom ZoomBox</title>
+    <tags>navigation toolbar</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/navtoolbar-alwaysZoom.html"/>
+    <summary>Demo of a custom NavToolbar which uses a zoomBox tool that always zoom in even when the zoom box is too big.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/navtoolbar-alwaysZoom.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Navigation Toolbar: Outside the Map</title>
+    <tags>navigation toolbar, style, position, div</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/navtoolbar-outsidemap.html"/>
+    <summary>navtoolbar-outsidemap.html</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/navtoolbar-outsidemap.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>NavToolbar Demo</title>
+    <tags>navigation toolbar, basic</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/navtoolbar.html"/>
+    <summary>Demo the NavToolbar, a subclass of Control.Panel which shows icons for navigation.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/navtoolbar.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>OpenLS Geocoding Example</title>
+    <tags>OpenLS, XLS, Geocoding</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/openls.html"/>
+    <summary>Show how to use an OpenLS service.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/openls.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Pan and Zoom Panels</title>
+    <tags>panning, zooming, panel, CSS, style</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/pan-zoom-panels.html"/>
+    <summary>Customizable pan and zoom panels</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/pan-zoom-panels.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>GeoRSS PointTrack in OpenLayers</title>
+    <tags>GeoRSS, PointTrack</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/point-track-markers.html"/>
+    <summary>This demo uses OpenLayers.Layer.GeoRSS and OpenLayers.Layer.PointTrack.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/point-track-markers.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>OpenLayers Regular Polygon Example</title>
+    <tags>vector, feature, regularpolygon, drawing, draw, advanced</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/regular-polygons.html"/>
+    <summary>Shows how to use the RegularPolygon handler to draw features with different numbers of sides.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/regular-polygons.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Open Popup on Layer.Vector</title>
+    <tags>vector, feature, selecting, selection, popup</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/select-feature-openpopup.html"/>
+    <summary>Using a Control.SelectFeature, open a popup on click.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/select-feature-openpopup.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Setting a Visual Extent</title>
+    <tags>boxes, box, marker</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/setextent.html"/>
+    <summary>Use a boxes layer to visually display the area of interest indicated by a user.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/setextent.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Simplify a LineString geometry</title>
+    <tags>Douglas-Peucker, Douglas, Peucker, Peuker, tolerance</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/simplify-linestring.html"/>
+    <summary>Shows the usage of the method &amp;quot;simplify&amp;quot; that implements the Douglas-Peucker algorithm to remove &amp;quot;insignificant&amp;quot; vertices from LineString geometries.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/simplify-linestring.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>SLD Parser</title>
+    <tags>sld, sldselect, styling, style, parser, cleanup</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/sld-parser.html"/>
+    <summary>Parsing Styled Layer Descriptor (SLD) documents with the SLD format.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/sld-parser.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>SOS client example</title>
+    <tags>sos, sensor, observation, popup, advanced</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/sos.html"/>
+    <summary>Shows how to connect OpenLayers to a Sensor Observation Service (SOS)</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/sos.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>OpenLayers Split Feature Example</title>
+    <tags>vector, feature, splitting, split, stylemap</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/split-feature.html"/>
+    <summary>Demonstrates splitting of line features.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/split-feature.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Extended clustering</title>
+    <tags>cluster, advanced</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/strategy-cluster-extended.html"/>
+    <summary>Shows the usage of custom classes for a fine grained control about the clustering behaviour.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/strategy-cluster-extended.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Map &quot;Teleportation&quot; and Rendering</title>
+    <tags>map, rendering</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/teleportation.html"/>
+    <summary>Call the map's render method to change its container.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/teleportation.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Tiled Map Service Example</title>
+    <tags>tile, cache, tms</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/tms.html"/>
+    <summary>Demonstrate the initialization and modification of a Tiled Map Service layer.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/tms.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>OpenLayers Spherical Mercator Example</title>
+    <tags>sperical, mercator, epsg, projection</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/web-mercator.html"/>
+    <summary>Shows the use of layers in spherical or web mercator using different EPSG codes to indicate the same projection.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/web-mercator.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>WFS Protocol and Filter</title>
+    <tags>filter, wfs, comparison</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/wfs-filter.html"/>
+    <summary>Demonstrates the use of a filter in making GetFeature requests using the WFS protocol.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/wfs-filter.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>WFS Transaction Example</title>
+    <tags>wfs, wfst, wfs-t, advanced</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/wfs-protocol-transactions.html"/>
+    <summary>Shows the use of the WFS Transactions (WFS-T).</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/wfs-protocol-transactions.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Vector Behavior Example</title>
+    <tags>wfs, vector</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/wfs-protocol.html"/>
+    <summary>Uses a BBOX strategy, WFS protocol, and GML format.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/wfs-protocol.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>WFS Reprojection Example</title>
+    <tags>reprojection, styling, stylemap, wfs, vector, advanced</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/wfs-reprojection.html"/>
+    <summary>Shows the use of the client side reprojection support.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/wfs-reprojection.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Snap/Split and Persist via WFS</title>
+    <tags>snapping, splitting, wfs, wfst, wfs-t, advanced</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/wfs-snap-split.html"/>
+    <summary>Shows snapping, splitting, and use of the WFS Transactions (WFS-T).</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/wfs-snap-split.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>WMC Example</title>
+    <tags>wmc, parser, advanced, cleanup</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/wmc.html"/>
+    <summary>Shows parsing of Web Map Context documents.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/wmc.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>WMS with POST Requests to Avoid Long URLs</title>
+    <tags>sld, sld_body, post, iframe, advanced</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/wms-long-url.html"/>
+    <summary>Render tiles in IMG or IFRAME elements, depending on the complexity of the GetMap request</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/wms-long-url.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>WMS Example</title>
+    <tags>wms, layer, singletile</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/wms.html"/>
+    <summary>Shows the basic use of openlayers using a WMS layer</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/wms.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>WMS Time Example</title>
+    <tags>wmst, wms-t</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/wmst.html"/>
+    <summary>Shows the use of the DimensionManager control with a time-enabled WMS layer</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen, Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/wmst.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>WMTS GetFeatureInfo Control</title>
+    <tags>wmts, tile, cache, getfeatureinfo</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/wmts-getfeatureinfo.html"/>
+    <summary>The WMTSGetFeatureInfo control allows retrieval of information about features displayed in a WMTS layer.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/wmts-getfeatureinfo.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Web Map Tile Service (WMTS) Layer</title>
+    <tags>wmts</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/wmts.html"/>
+    <summary>The WMTS layer allows viewing of tiles from a server implementing the OGC Web Map Tile Service (WMTS) standard version 1.0.0.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/wmts.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>XHTML Example</title>
+    <tags>xhtml</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/xhtml.html"/>
+    <summary>Shows openlayers running in a XHTML 1.0 Strict Doctype</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/xhtml.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>Zoom Level</title>
+    <tags>zoom, zoomlevel, resolution, scale, cleanup</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/zoomLevels.html"/>
+    <summary>This example shows the use of the resolutions layer option on a number of layer types.</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Marc Jansen</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/zoomLevels.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+  <entry>
+    <title>OpenLayers ArcGIS Cache Example (MapServer Access)</title>
+    <tags>arcgis, arcgiscache, cache, tms</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/arcgiscache_ags.html"/>
+    <summary>Demonstrates the basic initialization of the ArcGIS Cache layer using a prebuilt configuration, and standard tile access.</summary>
+    <updated>2011-05-31T15:00:51+0000</updated>
+    <author>
+      <name>ahocevar</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/arcgiscache_ags.html#2011-05-31T15:00:51+0000</id>
+  </entry>
+  <entry>
+    <title>ArcGIS Server Map Cache Example (Direct Access)</title>
+    <tags>arcgiscache_direct.html</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/arcgiscache_direct.html"/>
+    <summary>Demonstrates the basic initialization of the ArcGIS Cache layer using a prebuilt configuration, and direct tile access from a file store.</summary>
+    <updated>2011-05-31T15:00:51+0000</updated>
+    <author>
+      <name>ahocevar</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/arcgiscache_direct.html#2011-05-31T15:00:51+0000</id>
+  </entry>
+  <entry>
+    <title>Canvas Inspector</title>
+    <tags>canvas-inspector.html</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/canvas-inspector.html"/>
+    <summary>Displays pixel values for canvas context.</summary>
+    <updated>2011-05-31T15:00:51+0000</updated>
+    <author>
+      <name>ahocevar</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/canvas-inspector.html#2011-05-31T15:00:51+0000</id>
+  </entry>
+    <entry>
+    <title>Auto WMS Time Example</title>
+    <tags>wmst, wms-t, dimension manager, time, dimensions</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/wmst-auto.html"/>
+    <summary>Shows the use and automatic configuration of the DimensionManager control from time-enabled WMS GetCapabilities responses</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/wmst-auto.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+    <entry>
+    <title>Time Control Example</title>
+    <tags>wmst, wms-t, dimension manager, time, dimensions</tags>
+    <link href="http://mpriour.github.com/openlayers/examples/time-control.html"/>
+    <summary>Shows the use of the DimensionManager control with a series of time enabled layers from different sources. Illustrates the path, intensity, and development of Hurricane Irene</summary>
+    <updated>2011-06-14T06:46:13+0000</updated>
+    <author>
+      <name>Matt Priour</name>
+    </author>
+    <id>http://mpriour.github.com/openlayers/examples/time-control.html#2011-06-14T06:46:13+0000</id>
+  </entry>
+</feed>
