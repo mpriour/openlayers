@@ -49,7 +49,7 @@
                 },
                 buffer: 0,
                 transitionEffect:'resize',
-                removeBackBufferDelay: 200
+                removeBackBufferDelay: 400
             });
 
             timeCtl.events.on({
@@ -61,7 +61,7 @@
 
             map.addLayers([ol_wms, ia_wms]);
             map.addControl(new OpenLayers.Control.LayerSwitcher());
-            map.zoomToExtent(new OpenLayers.Bounds(-100.898437,22.148438,-78.398437,39.726563));
+            map.zoomToExtent([-100.04882768088, 23.542480596221, -77.54882768088, 34.792480596221]);
             update_date({
                 object: timeCtl,
                 currentValue: timeCtl.currentValue
