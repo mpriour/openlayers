@@ -7,11 +7,45 @@
     <title>OpenLayers: WMS + Time</title>
     <link rel="stylesheet" href="../theme/default/style.css" type="text/css">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+        .tallmap{
+            width: 700px;
+            height: 500px;
+            border: 1px solid #ccc;
+        }
+    </style>
     <script src="../lib/OpenLayers.js"></script>
     <script type="text/javascript">
-        var map, ia_wms;
+        var map, timeCtl, autoLayerNames;
+        function addLayers(request){
+            var wmsFormat = new OpenLayers.Format.WMSCapabilities({version:'1.3.0'});
+            var wmsListCaps = wmsFormat.read(request.responseText);
+            var layers = wmsListCaps.capability.layers;
+            for(var i=0; i<layers.length; ++i){
+                if(layers[i].name && OpenLayers.Util.indexOf(autoLayerNames, layers[i].name) > -1){
+                    var dim_wms = new OpenLayers.Layer.WMS(
+                        layers[i].abstract || layers[i].title || layers[i].name,
+                        wmsListCaps.capability.request.getmap.href,
+                        {
+                            layers: layers[i].name,
+                            transparent: true
+                        },
+                        OpenLayers.Util.extend(layers[i],{
+                            visibility: true,
+                            isBaseLayer: false,
+                            transitionEffect: 'resize',
+                            singleTile: true,
+                            alwaysInRange: true, //the 2 target layers are at very different scales
+                            removeBackBufferDelay: 50 //prevent flashing during animation
+                        })
+                    );
+                    map.addLayer(dim_wms);
+                }
+            }
+            timeCtl.setCurrentValue(startDate);
+        }
+        
         function init(){
-            
             dateElements = {
                 year: OpenLayers.Util.getElement('year'),
                 month: OpenLayers.Util.getElement('month'),
@@ -20,37 +54,16 @@
                 minute: OpenLayers.Util.getElement('minute')
             };
             
+            autoLayerNames = ['Thgt', 'nexrad-n0r-wmst'];
+            
+            startDate = OpenLayers.Date.parse('2012-01-01T19:00:00Z').getTime();
+            
             timeCtl = new OpenLayers.Control.DimensionManager({
                 dimension: 'time',
-                step: 5 * OpenLayers.TimeStep[OpenLayers.TimeUnit.MINUTES],
-                frameRate:1.5,
-                autoSync: true
+                autoSync: true,
+                snapToList: true
             });
-            map = new OpenLayers.Map('map');
-            map.addControl(timeCtl);
-            var ol_wms = new OpenLayers.Layer.WMS( "OpenLayers WMS",
-                "http://vmap0.tiles.osgeo.org/wms/vmap0?", {layers: 'vmap0'} );
-
-            var last5min = new Date(Math.floor(Date.now()/3e5)*3e5);
-            var last65min = new Date(Math.floor(Date.now()/3e5)*3e5-36e5)
-
-            ia_wms = new OpenLayers.Layer.WMS("Nexrad", "http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r-t.cgi?", {
-                layers: "nexrad-n0r-wmst",
-                transparent: true,
-                format: 'image/png',
-                time:OpenLayers.Date.toISOString(last65min),
-                tiled: true
-            },{
-                dimensions: {
-                    time: {
-                        values: [[OpenLayers.Date.toISOString(last65min), OpenLayers.Date.toISOString(last5min), 'PT5M'].join('/')]
-                    }
-                },
-                buffer: 0,
-                transitionEffect:'resize',
-                removeBackBufferDelay: 200
-            });
-
+            
             timeCtl.events.on({
                 'tick': update_date,
                 'reset': update_date,
@@ -58,13 +71,28 @@
                 scope: timeCtl
             });
 
-            map.addLayers([ol_wms, ia_wms]);
-            map.addControl(new OpenLayers.Control.LayerSwitcher());
-            map.zoomToExtent(new OpenLayers.Bounds(-100.898437,22.148438,-78.398437,39.726563));
-            update_date({
-                object: timeCtl,
-                currentValue: timeCtl.currentValue
+            map = new OpenLayers.Map('map');
+            map.addControl(timeCtl);
+            
+            var ol_wms = new OpenLayers.Layer.WMS("OpenLayers WMS",
+                "http://vmap0.tiles.osgeo.org/wms/vmap0?", {
+                layers: 'vmap0'
             });
+            
+            map.addLayers([ol_wms]);
+            map.addControl(new OpenLayers.Control.LayerSwitcher());
+            map.setCenter([-80, 40], 4);
+			
+            OpenLayers.Request.GET({
+                url: 'xml/dimension-list-capabilities.xml',
+                success: addLayers
+            });
+            
+            OpenLayers.Request.GET({
+                url: 'xml/dimension-range-capabilities.xml',
+                success: addLayers
+            });
+
         }
         
         function update_date(evt) {
@@ -99,7 +127,7 @@
         </div>
         <p id="shortdesc">
             Shows the use of the TimeManager control with a single simple WMS-T (time) layer<br>
-            Click on the PLAY button to start.
+			Click on the PLAY button to start.
         </p>
     <input size="4" type='text' id='year' value="" onchange="set_date" />-
     <input size="2" type="text" id="month" value="" onchange="set_date" />-
@@ -113,12 +141,15 @@
         &nbsp;|&nbsp;<button type="button" onclick="timeCtl.tick()">Step</button>
         &nbsp;|&nbsp;<button type="button" onclick="timeCtl.play()">Play</button>
     </div>
-    <div id="map" class="smallmap"></div>
+    <div id="map" class="tallmap"></div>
     <div id="docs">
         <p>WMS-T example: hit PLAY, and the radar image will change along with the<br>
-        time display. Uses the OpenLayers.Control.TimeManager to update the date<br>
-        elements with the time of the animation. Starts 1 hour before the nearest 5 min<br>
-        interval to the current time.</p>
+		time display. Uses the OpenLayers.Control.TimeManager to update the date<br>
+		elements with the time of the animation. Starts 1 hour before the nearest 5 min<br>
+		interval to the current time.</p>
     </div>
   </body>
 </html>
+
+
+

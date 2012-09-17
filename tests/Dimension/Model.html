@@ -1,0 +1,275 @@
+<html>
+<head>
+    <script src="../OLLoader.js"></script>
+    <script type="text/javascript">
+    function test_basic(t) {
+        t.plan(8);
+        var m = new OpenLayers.Dimension.Model();
+        t.ok(!m.layers,"layers is null by default");
+        t.ok(!m.dimension,"dimension is null by default");
+        t.ok(!m.map,"map is null by default");
+        t.ok(!m.values,"values is null by default");
+        t.ok(!m.range,"range is null by default");
+        t.ok(m.syncToMap,"syncToMap is true by default");
+        m = null;
+        
+        var r = [0,10], v = [0,5,10];
+        m = new OpenLayers.Dimension.Model({
+            range: r,
+            values: v
+        });
+        t.eq(m.range,r,"range option respected");
+        t.eq(m.values,v,"values option respected");
+    }
+    function test_processDimensionValues(t){
+        t.plan(21);
+        var dimT = {
+            units: "ISO8601",
+            "default":"2000-08-22",
+            values:["1999-01-01/2000-08-22/P1D"]
+        };
+        var dimE = {
+            units: "CRS:88",
+            "default":"0",
+            nearestVal: true,
+            multipleVal: false,
+            values:["0/1000/100"]
+        };
+
+        var me = new OpenLayers.Dimension.Model();
+        var mt = new OpenLayers.Dimension.Model({dimension:'time'});
+        var tInfo = mt.processDimensionValues(dimT);
+        var eInfo = me.processDimensionValues(dimE);
+        t.eq(eInfo.range,[0,1000],"numeric conversion & range/res parsed correctly");
+        t.eq(tInfo.range,[new Date("1999-01-01").getTime(),new Date("2000-08-22").getTime()],"date conversion & range/res parsed correctly");
+        t.eq(eInfo.resolution,100,"resolution parsed correctly");
+        t.eq(tInfo.resolution,OpenLayers.TimeStep[OpenLayers.TimeUnit.DAYS],"iso8601 period converted to milliseconds");
+        t.eq(tInfo.timeUnits,OpenLayers.TimeUnit.DAYS,"iso8601 period unit parsed correctly");
+        t.eq(tInfo.timeStep,1,"iso8601 step value parsed correctly");
+        eInfo = null;
+        tinfo = null;
+        
+        //test mixed unit iso8601 period conversion
+        dimT.values = ["1999-01-01/2000-08-22/P1DT4H"]; //ie 28 hours
+        tInfo = mt.processDimensionValues(dimT);
+        t.eq(tInfo.timeStep,28,"iso8601 step value parsed correctly");
+        t.eq(tInfo.timeUnits,OpenLayers.TimeUnit.HOURS,"iso8601 period unit parsed correctly");
+        t.eq(tInfo.resolution,28 * OpenLayers.TimeStep[OpenLayers.TimeUnit.HOURS],"iso8601 period converted to milliseconds");
+        tInfo = null;
+        dimT.values = ["1999-01-01/2000-08-22/P1DT45M"]; //ie 1485 minutes
+        tInfo = mt.processDimensionValues(dimT);
+        t.eq(tInfo.timeStep,1485,"iso8601 step value parsed correctly");
+        t.eq(tInfo.timeUnits,OpenLayers.TimeUnit.MINUTES,"iso8601 period unit parsed correctly");
+        t.eq(tInfo.resolution,1485 * OpenLayers.TimeStep[OpenLayers.TimeUnit.MINUTES],"iso8601 period converted to milliseconds");
+        tInfo = null;
+        
+        
+        dimE.values = ["0","10","50"];
+        eInfo = me.processDimensionValues(dimE);
+        t.eq(eInfo.range,[0,50],"gets range from string numeric list properly");
+        t.ok(eInfo.values instanceof Array && eInfo.values.length>0, "list of values");
+        t.eq(eInfo.values.length,3,"handles list values properly");
+        
+        dimT.values = ["1980-01","1990","6-15-1995","1999-12-15T12:05:00Z"];
+        tInfo = mt.processDimensionValues(dimT);
+        t.eq(tInfo.range,[OpenLayers.Date.parse(dimT.values[0]).getTime(),OpenLayers.Date.parse(dimT.values[3]).getTime()],"gets range from string date list properly");
+        t.ok(tInfo.values instanceof Array && tInfo.values.length>0, "list of values");
+        t.eq(tInfo.values.length,4,"handles list values properly");
+        t.ok(tInfo.values[1] == OpenLayers.Date.parse(dimT.values[1]).getTime() && tInfo.values[2] == new Date(dimT.values[2]).getTime(),
+            "parsed other date values correctly");
+        einfo = null;
+        tInfo = null;
+        
+        dimE.values = ["50"];
+        eInfo = me.processDimensionValues(dimE);
+        t.ok(eInfo.values instanceof Array && eInfo.values.length>0, "list of values");
+        t.eq(eInfo.range,[50,50],"gets range from single value list properly");
+    }
+    function test_combineDimensionInfo(t){
+        t.plan(18);
+        var rm = 0, vm = 0;
+        var m = new OpenLayers.Dimension.Model({
+            range: [0,5],
+            resolution: 1,
+            eventListeners:{
+                'rangemodified':function(e){++rm;},
+                'valuesmodified':function(e){++vm;}
+            }
+        });
+        //test range & res
+        m.combineDimensionInfo({range:[-1,6]});
+        t.eq(m.range,[-1,6],'range adjusted');
+        t.eq(rm,1,'range modified fired');
+        m.combineDimensionInfo({range:[2,8]});
+        t.eq(m.range,[-1,8],'range adjusted');
+        t.eq(rm,2,'range modified fired');
+        m.combineDimensionInfo({range:[-2,4]});
+        t.eq(m.range,[-2,8],'range adjusted');
+        t.eq(rm,3,'range modified fired');
+        m.combineDimensionInfo({range:[2,4]});
+        t.eq(rm,3,'range modified not fired');
+        t.eq(vm,0,'valuesmodifed was never fired');
+        //test value list
+        rm=0;vm=0;m=null;
+        m = new OpenLayers.Dimension.Model({
+            values: [0,5,11],
+            eventListeners:{
+                'rangemodified':function(e){++rm;},
+                'valuesmodified':function(e){++vm;}
+            }
+        });
+        t.eq(m.range,[0,11],'range calculated from values');
+        m.combineDimensionInfo({
+            values:[-1,2,9],
+            range:[-1,9]
+        });
+        t.eq(m.values,[-1,0,2,5,9,11],'values combined correctly');
+        t.eq(rm,1,'range modified fired');
+        t.eq(vm,1,'values modified fired');
+        m.combineDimensionInfo({
+            values:[3,7],
+            range:[3,7]
+        });
+        t.eq(m.values,[-1,0,2,3,5,7,9,11],'values combined correctly');
+        t.eq(rm,1,'range modified NOT fired');
+        t.eq(vm,2,'values modified fired');
+        m.combineDimensionInfo({
+            values:[2,5,11],
+            range:[2,11]
+        });
+        t.eq(m.values,[-1,0,2,3,5,7,9,11],'values list is not changed');
+        t.eq(rm,1,'range modified NOT fired');
+        t.eq(vm,2,'values modified NOT fired');
+    }
+    function test_removeDimensionInfo(t){
+        t.plan(23);
+        var rm = 0, vm = 0;
+        var m = new OpenLayers.Dimension.Model({
+            range: [0,5],
+            dimension:'test',
+            resolution: 1,
+            eventListeners:{
+                'rangemodified':function(e){++rm;},
+                'valuesmodified':function(e){++vm;}
+            }
+        });
+        m.layers = [{metadata:{testInfo:{range:[2,4]}}},
+        {metadata:{testInfo:{range:[1,3]}}}];
+        //test range & res
+        m.removeDimensionInfo({range:[0,5]});
+        t.eq(m.range,[1,4],'range adjusted');
+        t.eq(rm,1,'range modified fired');
+        m.layers = [m.layers[1]];
+        m.removeDimensionInfo({range:[2,4]});
+        t.eq(m.range,[1,3],'range adjusted');
+        t.eq(rm,2,'range modified fired');
+        m.removeDimensionInfo({range:[-2,4]});
+        t.eq(m.range,[1,3],'range NOT adjusted');
+        t.eq(rm,2,'range modified not fired');
+        t.eq(vm,0,'valuesmodifed was never fired');
+        //test value list
+        rm=0;vm=0;m=null;
+        m = new OpenLayers.Dimension.Model({
+            values: [-1,0,2,3,5,9,11],
+            eventListeners:{
+                'rangemodified':function(e){++rm;},
+                'valuesmodified':function(e){++vm;}
+            }
+        });
+        m.removeDimensionInfo({values:[-1,9]});
+        t.eq(m.values,[0,2,3,5,11],'value adjusted');
+        t.eq(m.range,[0,11],'range adjusted');
+        t.eq(rm,1,'range modified fired');
+        t.eq(vm,1,'values modifed fired');
+        
+        m.removeDimensionInfo({values:[11]});
+        t.eq(m.values,[0,2,3,5],'value adjusted');
+        t.eq(m.range,[0,5],'range adjusted');
+        t.eq(rm,2,'range modified fired');
+        t.eq(vm,2,'values modifed fired');
+        
+        m.removeDimensionInfo({values:[2]});
+        t.eq(m.values,[0,3,5],'value adjusted');
+        t.eq(m.range,[0,5],'range NOT adjusted');
+        t.eq(rm,2,'range modified NOT fired');
+        t.eq(vm,3,'values modifed fired');
+        
+        m.removeDimensionInfo({values:[-2,4,6]});
+        t.eq(m.values,[0,3,5],'values NOT adjusted');
+        t.eq(m.range,[0,5],'range NOT adjusted');
+        t.eq(rm,2,'range modified NOT fired');
+        t.eq(vm,3,'values modifed NOT fired');
+
+    }
+    function test_addLayer(t){
+        t.plan(0);
+    }
+    function test_removeLayer(t){
+        t.plan(0);
+    }
+    function test_setLayers(t){
+        t.plan(0);
+    }    
+    function test_initialize(t){
+        t.plan(7);
+        //test various option combinations
+        var map = new OpenLayers.Map({
+            layers:[new OpenLayers.Layer('a',{
+                dimensions: {
+                    test: {values:["0/1000/10"]}
+                }
+            })]
+        });
+        var lyrs = [new OpenLayers.Layer('b',{
+                dimensions: {
+                    test: {values:["-100/10/25"]}
+                }
+            }), new OpenLayers.Layer('c',{
+                dimensions: {
+                    test: {values:[-50,-20,0,15,45]}
+                }
+            })];
+        var m = new OpenLayers.Dimension.Model({
+            dimension: 'test',
+            map: map,
+            layers: lyrs,
+            range: [-500,5000]
+        });
+        //should only use the map's layer
+        t.eq(m.range,[0,1000],'used correct option');
+        t.ok(m.layers.length == 1 && m.layers[0].id == map.layers[0].id,'used correct layers');
+        t.eq(m.resolution,10,'used correct resolution');
+        
+        m = null;
+        m = new OpenLayers.Dimension.Model({
+            dimension: 'test',
+            layers: lyrs,
+            range: [-500,5000]
+        });
+        //should only use the layers info
+        t.eq(m.range,[-100,45],'used correct option');
+        t.ok(m.layers.length == 2 && m.layers[1].id == lyrs[1].id,'used correct layers');
+        t.eq(m.resolution,25,'used correct resolution');
+        t.eq(m.values,[-50,-20,0,15,45],'got list values');    
+    }
+    function test_combineLists(t){
+        t.plan(0);        
+    }
+    function test_removeListValues(t){
+        t.plan(0);        
+    }
+    function test_getMinMaxRes(t){
+        t.plan(0);        
+    }
+    function test_calculateRange(t){
+        t.plan(0);        
+    }
+    function test_calculateValues(t){
+        t.plan(0);        
+    }
+    </script>
+</head>
+<body>
+    <div id="map" style="width: 400px; height: 250px;"/>
+</body>
+</html>
