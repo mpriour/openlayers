@@ -28,5 +28,6 @@ var map = new OpenLayers.Map({
     center: [0, 0],
     zoom: 3
 });
+tileManager = new OpenLayers.TileManager({map: map});
 
 map.addControl(new OpenLayers.Control.LayerSwitcher());
